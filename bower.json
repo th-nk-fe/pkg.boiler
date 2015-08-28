@@ -1,0 +1,54 @@
+{
+  "name": "TH_NK",
+  "version": "0.1.0",
+  "authors": [
+    "sion evans <sionevans@gmail.com>"
+  ],
+  "description": "base",
+  "main": "main",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "modernizr": "~2.8.3",
+    "hammerjs": "~2.0.4",
+    "rivets": "~0.8.1",
+    "sightglass": "~0.2.4",
+    "skrollr": "~0.6.30"
+  },
+  "devDependencies": {
+    "jquery": "~2.1.4",
+    "js.ajax": "th-nk-modules/js.ajax",
+    "js.dom": "th-nk-modules/js.dom",
+    "js.events": "th-nk-modules/js.events",
+    "js.helpers": "th-nk-modules/js.helpers",
+    "css.constants": "th-nk-modules/css.constants",
+    "css.defaults": "th-nk-modules/css.defaults",
+    "css.elements": "th-nk-modules/css.elements",
+    "css.functions": "th-nk-modules/css.functions",
+    "css.mixins": "th-nk-modules/css.mixins",
+    "css.normalize": "th-nk-modules/css.normalize",
+    "css.placeholders": "th-nk-modules/css.placeholders",
+    "css.utility": "th-nk-modules/css.utility",
+    "susy": "~2.2.5",
+    "pkg.collapse": "th-nk-modules/pkg.collapse",
+    "pkg.mobilenav": "th-nk-modules/pkg.mobilenav",
+    "pkg.tooltip": "th-nk-modules/pkg.tooltip",
+    "pkg.tabs": "th-nk-modules/pkg.tabs",
+    "pkg.carousel": "th-nk-modules/pkg.carousel",
+    "pkg.modal": "th-nk-modules/pkg.modal",
+
+    "animate.css-scss": "geoffgraham/animate.scss"
+  },
+  "overrides": {
+    "modernizr": {
+      "main": "modernizr-custom.js"
+    }
+  }
+}

@@ -1,0 +1,1169 @@
+{
+    "template": "master",
+    "title": "kitchensink"
+}
+
+<main class="main" role="main">
+	<div class="carousel" data-direction="ltr" data-transition data-autoscroll="true" data-infinate="true" data-pagination>
+		<div class="carousel__container">
+			<div class="carousel__panel">
+			1
+			</div>
+			<div class="carousel__panel">
+			2
+			</div>
+			<div class="carousel__panel">
+			3
+			</div>
+			<div class="carousel__panel">
+			4
+			</div>
+			<div class="carousel__panel">
+			5
+			</div>
+			<div class="carousel__panel">
+			6
+			</div>
+			<div class="carousel__panel">
+			7
+			</div>
+			<div class="carousel__panel">
+			8
+			</div>
+		</div>
+	</div>
+	<br>
+	<a class="btn tooltip tooltip--top" data-tooltip-type="enhanced">top tooltip</a>
+	<a class="btn tooltip tooltip--top"><span class="tooltip__text">tooltip text</span>tooltip trigger</a>
+	<br>
+	<h1>collapse--accordion</h1>
+	<ul class="collapse" data-collapse="collapse--accordion">
+		<li>
+			<div class="collapse_heading">heading 1</div>
+			<div class="collapse_content">1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+		</li>	
+		<li>
+			<div class="collapse_heading">heading 2</div>
+			<div class="collapse_content">2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+		</li>	
+		<li>
+			<div class="collapse_heading active">heading 3</div>
+			<div class="collapse_content">3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+		</li>			
+	</ul>
+
+	<h1>collapse--expand</h1>
+	<ul class="collapse" data-collapse="collapse--expand">
+		<li>
+			<div class="collapse_heading">heading 1</div>
+			<div class="collapse_content">1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+		</li>	
+		<li>
+			<div class="collapse_heading">heading 2</div>
+			<div class="collapse_content">2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+		</li>	
+		<li>
+			<div class="collapse_heading active">heading 3</div>
+			<div class="collapse_content">3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+		</li>			
+	</ul>
+
+	<h1>collapse--hover</h1>
+	<ul class="collapse" data-collapse="collapse--hover">
+		<li>
+			<div class="collapse_heading">heading 1</div>
+			<div class="collapse_content">1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+		</li>	
+		<li>
+			<div class="collapse_heading">heading 2</div>
+			<div class="collapse_content">2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+		</li>	
+		<li>
+			<div class="collapse_heading active">heading 3</div>
+			<div class="collapse_content">3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+		</li>			
+	</ul>
+
+	<h1>Tables</h1>
+
+	<table>
+		<tr>
+			<th scope="col">dog</th>
+			<th scope="col">cat</th>
+			<th scope="col">horse</th>
+			<th scope="col">iguana</th>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>2</td>
+			<td>10</td>
+			<td>500</td>
+		</tr>
+	</table>
+
+	<hr>
+
+	<table>
+		<caption>Animals on our farm</caption>
+		<colgroup>
+			<col class="column1" />
+			<col class="column2" />
+			<col class="column3-4" span="2" />
+		</colgroup>
+		<tr>
+			<th>dog</th>
+			<th>cat</th>
+			<th>horse</th>
+			<th>iguana</th>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>2</td>
+			<td>10</td>
+			<td>500</td>
+		</tr>
+	</table>
+
+	<hr>
+
+	<table>
+		<thead>
+			<tr>
+				<th scope="col">Header 1</th>
+				<th scope="col">Header 2</th>
+				<th scope="col">Header 3</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<td>Footer 1</td>
+				<td>Footer 2</td>
+				<td>Footer 3</td>
+			</tr>
+		</tfoot>
+		<tbody>
+			<tr>
+				<td>Cell 1</td>
+				<td>Cell 2</td>
+				<td>Cell 3</td>
+			</tr>
+			<tr>
+				<td>Cell 7</td>
+				<td>Cell 8</td>
+				<td>Cell 9</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<hr>
+
+	<table class="table--striped table--bordered">
+		<thead>
+			<tr>
+				<th scope="col">Header 1</th>
+				<th scope="col">Header 2</th>
+				<th scope="col">Header 3</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<td>Footer 1</td>
+				<td>Footer 2</td>
+				<td>Footer 3</td>
+			</tr>
+		</tfoot>
+		<tbody>
+			<tr>
+				<td>Cell 1</td>
+				<td>Cell 2</td>
+				<td>Cell 3</td>
+			</tr>
+			<tr>
+				<td>Cell 7</td>
+				<td>Cell 8</td>
+				<td>Cell 9</td>
+			</tr>
+			<tr>
+				<td>Cell 7</td>
+				<td>Cell 8</td>
+				<td>Cell 9</td>
+			</tr>
+			<tr>
+				<td>Cell 7</td>
+				<td>Cell 8</td>
+				<td>Cell 9</td>
+			</tr>
+			<tr>
+				<td>Cell 7</td>
+				<td>Cell 8</td>
+				<td>Cell 9</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<hr>
+
+	<table>
+		<thead>
+		<tr>
+			<th scope="col">Header 1</th>
+			<th scope="col">Header 2</th>
+			<th scope="col">Header 3</th>
+		</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<td>Footer 1</td>
+				<td>Footer 2</td>
+				<td>Footer 3</td>
+			</tr>
+		</tfoot>
+		<tbody>
+			<tr>
+				<td>Cell 1</td>
+				<td>Cell 2</td>
+				<td>Cell 3</td>
+			</tr>
+			<tr>
+				<td>Cell 7</td>
+				<td>Cell 8</td>
+				<td>Cell 9</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<hr>
+
+	<table>
+		<colgroup>
+			<col />
+			<col />
+			<col span="2" />
+		</colgroup>
+		<tr>
+			<th>dog</th>
+			<th>cat</th>
+			<th>horse</th>
+			<th>iguana</th>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>2</td>
+			<td>10</td>
+			<td>500</td>
+		</tr>
+	</table>
+
+</section>
+
+<section class="container">
+	<h3>h1-h6</h3>
+
+	<div class="message message--info">
+		headings
+	</div>
+	<h1>A Visual Type Scale <code>&lt;h1&gt;</code></h1>
+	<h2>A Visual Type Scale <code>&lt;h2&gt;</code></h2>
+	<h3>A Visual Type Scale <code>&lt;h3&gt;</code></h3>
+	<h4>A Visual Type Scale <code>&lt;h4&gt;</code></h4>
+	<h5>A Visual Type Scale <code>&lt;h5&gt;</code></h5>
+	<h6>A Visual Type Scale <code>&lt;h6&gt;</code></h6>
+
+	<hr>
+
+	<h1>A Visual Type Scale</h1>
+	<h2>A Visual Type Scale</h2>
+	<h3>A Visual Type Scale</h3>
+	<h4>A Visual Type Scale</h4>
+	<h5>A Visual Type Scale</h5>
+	<h6>A Visual Type Scale</h6>
+
+	<hr>
+	<h3>main</h3>
+	<h3>address</h3>
+	<address>Jack Osborne</address>
+	<h3>p</h3>
+	<p>Lorem ipsum dolor sit amet, consectetur Laboriosam voluptatem a beatae accusantium accusamus dolor provident error consectetur quibusdam suscipit neque temporibus. Velit omnis voluptatum quasi tempora reiciendis expedita reprehenderit.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur Laboriosam voluptatem a beatae accusantium accusamus dolor provident error consectetur quibusdam suscipit neque temporibus. Velit omnis voluptatum quasi tempora reiciendis expedita reprehenderit.</p>
+	<hr>
+	<h3>hr</h3>
+	<hr>
+	<hr class="rule--dotted">
+	<hr class="rule--dashed">
+	<hr class="rule--ornament">
+	<hr class="rule--ornament" data-ornament="!">
+	<hr>
+	<h3>pre</h3>
+	<pre>P R E F O R M A T T E D T E X T
+		! " # $ % &amp; ' ( ) * + , - . /
+		0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
+		@ A B C D E F G H I J K L M N O
+		P Q R S T U V W X Y Z [ \ ] ^ _
+		` a b c d e f g h i j k l m n o
+		p q r s t u v w x y z { | } ~</pre>
+	<hr>
+	<h3>blockquote</h3>
+	<blockquote>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius quo magni dolorum vero placeat, repellendus nisi ipsam. Alias, qui vitae deserunt modi est nemo quidem error quis natus. Facere?</p>
+	</blockquote>
+	<hr>
+	<h3>ol</h3>
+	<ol>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio iste voluptates saepe ipsa magni repellendus</li>
+		<li>Lorem ipsum dolor sit amet
+			<ol>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+				<li>Lorem ipsum dolor sit amet
+					<ol>
+						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+						<li>Lorem ipsum dolor sit amet</li>
+					</ol>
+				</li>
+			</ol>
+		</li>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+		<li>Lorem ipsum dolor sit amet
+			<ul>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+				<li>Lorem ipsum dolor sit amet
+					<ul>
+						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+						<li>Lorem ipsum dolor sit amet</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ol>
+	<hr>
+	<h3>ul</h3>
+	<ul>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio iste voluptates saepe ipsa magni repellendus</li>
+		<li>Lorem ipsum dolor sit amet
+			<ul>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+				<li>Lorem ipsum dolor sit amet
+					<ul>
+						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+						<li>Lorem ipsum dolor sit amet</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+		<li>Lorem ipsum dolor sit amet
+			<ol>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+				<li>Lorem ipsum dolor sit amet
+					<ol>
+						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+						<li>Lorem ipsum dolor sit amet</li>
+					</ol>
+				</li>
+			</ol>
+		</li>
+	</ul>
+	<hr>
+	<h3>dl, dt, dd</h3>
+	<p>The dl element is for another type of list called a definition list. Instead of list items, the content of a dl consists of dt (Definition Term) and dd (Definition Description) pairs.</p>
+	<h4>Multi-line Definitions</h4>
+	<dl>
+		<dt>This is a term</dt>
+		<dd>this is the definition of that term, which both live in a <code>dl</code>.</dd>
+		<dt>Another Term</dt>
+		<dd>And it gets a definition too, which is this line</dd>
+		<dd>This is a 2<sup>nd</sup> definition for a single term. A <code>dt</code> may be followed by multiple <code>dd</code>s.</dd>
+	</dl>
+		<hr>
+	<h3>figure</h3>
+	<hr>
+	<h3>figcaption</h3>
+	<hr>
+	<h3>div</h3>
+	<hr>
+
+	<h3>del, ins</h3>
+	<p><del>This text is deleted</del> and <ins>This text is inserted</ins></p>
+	<hr>
+	<h3>img</h3>
+	<img src="../assets/media/placeholder-16.9.png" width="350px">
+	<img src="/foo.jpg" alt="Sample text for a broken image">
+	<hr>
+	<h3>iframe</h3>
+	<iframe src="http://example.com"></iframe>
+	<hr>
+	<h3>embed</h3>
+	<hr>
+	<h3>object</h3>
+	<hr>
+	<h3>param</h3>
+	<hr>
+	<h3>video</h3>
+	<hr>
+	<h3>audio</h3>
+	<hr>
+	<h3>source</h3>
+	<hr>
+	<h3>canvas</h3>
+	<hr>
+	<h3>track</h3>
+	<hr>
+	<h3>map</h3>
+	<hr>
+	<h3>area</h3>
+	<hr>
+	<h3>a</h3>
+	<p><a href="#/nowhere/" title="">This is a text link</a> <a href="mailto:example@example.com" title="">This is an email link</a></p>
+	<hr>
+	<h3>em</h3>
+	<p><em>This text has added emphasis</em></p>
+	<hr>
+	<h3>strong</h3>
+	<p><strong>Strong is used to indicate strong importance</strong></p>
+	<hr>
+	<h3>i, b</h3>
+	<p>The <i>i element</i> is text that is set off from the normal text</p>
+	<p>The <b>b element</b> is stylistically different text from normal text, without any special importance</p>
+	<hr>
+	<h3>u</h3>
+	<p>The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual annotation</p>
+	<hr>
+	<h3>s</h3>
+	<p><s>This text has a strikethrough</s></p>
+	<hr>
+	<h3>small</h3>
+	<p><small>This small text is small for for fine print, etc.</small></p>
+	<hr>
+	<h3>abbr</h3>
+	<p>Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr></p>
+	<hr>
+	<h3>q</h3>
+	<p><q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline quotation</q></p>
+	<hr>
+	<h3>cite</h3>
+	<p><cite>This is a citation</cite></p>
+	<hr>
+	<h3>dfn</h3>
+	<p>The <dfn>dfn element</dfn> indicates a definition.</p>
+	<hr>
+	<h3>sub, sup</h3>
+	<p>Subscript for things like H<sub>2</sub>O</p>
+	<p>Superscript<sup>�</sup></p>
+	<hr>
+	<h3>time</h3>
+	<time datetime="2013-04-06T12:32+00:00">2 weeks ago</time>
+	<hr>
+	<h3>code</h3>
+	<p><code>This is what inline code looks like.</code></p>
+	<hr>
+	<h3>kbd</h3>
+	<p>Keybord input: <kbd>Cmd</kbd></p>
+	<hr>
+	<h3>samp</h3>
+	<p><samp>This is sample output from a computer program</samp></p>
+	<hr>
+	<h3>var</h3>
+	<p>The <var>variarble element</var>, such as <var>x</var> = <var>y</var></p>
+	<hr>
+	<h3>mark</h3>
+	<p>The <mark>mark element</mark> indicates a highlight</p>
+	<hr>
+	<h3>bdi</h3>
+	<ul>
+		<li><bdi>johnsmith</bdi> joined the site</li>
+		<li><bdi>the_guru</bdi> posted "February update"</li>
+		<li><bdi>????</bdi> commented on "Getting started with HTML5"</li>
+	</ul>
+	<hr>
+	<h3>bdo</h3>
+	<p><bdo dir="rtl">Don't cheat by reading this in a mirror!</bdo></p>
+	<hr>
+	<h3>ruby, rt, rp</h3>
+	<hr>
+	<h3>span</h3>
+	<hr>
+	<h3>br</h3>
+	<hr>
+	<h3>wbr</h3>
+	<p>html5<wbr>doctor.com</p>
+	<hr>
+	<!--
+	<h1>Heading Giga</h1>
+	<h1>Heading Mega</h1>
+	-->
+	<h1>Heading Alpha</h1>
+	<h2>Heading Beta</h2>
+	<h3>Heading Gamma</h3>
+	<h4>Heading Delta</h4>
+	<h5>Heading Epsilon</h5>
+	<h6>Heading Zeta</h6>
+	<a href="#/nowhere/" class="btn" title="">Sample Button</a>
+	<p>For our base we use the following font settings on the HTML element to standardize the typographic scale in a consistent manner. We also make sure not to use united values for our line-heights per the recommendations of Mr. Eric Meyer himself.</p>
+
+</section>
+
+
+
+<section class="container">
+
+<form action="">
+
+
+	
+	
+		<div class="row">
+		<label for="field-55ba09dadaeb8">Text Input <em title="required">*</em></label>
+		<input type="text" name="" id="field-55ba09dadaeb8" class="" placeholder="Text Placeholder (required)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaebd">Text Input <em title="required">*</em></label>
+		<input type="text" name="" id="field-55ba09dadaebd" class="" placeholder="Text Placeholder (required,disabled)" aria-required="true" required disabled>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaec0">Text Input <em title="required">*</em></label>
+		<input type="text" name="" id="field-55ba09dadaec0" class="" placeholder="Text Placeholder (required,readonly)" aria-required="true" required readonly>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaec2">Text Input <em title="required">*</em></label>
+		<input type="text" name="" id="field-55ba09dadaec2" class="" aria-invalid="false" placeholder="Text Placeholder (required,invalid)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaec4">Text Input <em title="required">*</em></label>
+		<input type="text" name="" id="field-55ba09dadaec4" class="" aria-invalid="true" placeholder="Text Placeholder (required,invalid)" aria-required="true" required>
+		<p>This field is required</p>
+	</div>
+
+	<hr>
+
+	
+		<div class="row">
+		<label for="field-55ba09dadaec6">Email Input <em title="required">*</em></label>
+		<input type="email" name="" id="field-55ba09dadaec6" class="" placeholder="Email Placeholder (required)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaec8">Email Input <em title="required">*</em></label>
+		<input type="email" name="" id="field-55ba09dadaec8" class="" placeholder="Email Placeholder (required,disabled)" aria-required="true" required disabled>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaeca">Email Input <em title="required">*</em></label>
+		<input type="email" name="" id="field-55ba09dadaeca" class="" placeholder="Email Placeholder (required,readonly)" aria-required="true" required readonly>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaecc">Email Input <em title="required">*</em></label>
+		<input type="email" name="" id="field-55ba09dadaecc" class="" aria-invalid="false" placeholder="Email Placeholder (required,invalid)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaecd">Email Input <em title="required">*</em></label>
+		<input type="email" name="" id="field-55ba09dadaecd" class="" aria-invalid="true" placeholder="Email Placeholder (required,invalid)" aria-required="true" required>
+		<p>This field is required</p>
+	</div>
+
+	<hr>
+
+	
+		<div class="row">
+		<label for="field-55ba09dadaecf">Password Input <em title="required">*</em></label>
+		<input type="password" name="" id="field-55ba09dadaecf" class="" placeholder="Password Placeholder (required)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaed4">Password Input <em title="required">*</em></label>
+		<input type="password" name="" id="field-55ba09dadaed4" class="" placeholder="Password Placeholder (required,disabled)" aria-required="true" required disabled>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaed6">Password Input <em title="required">*</em></label>
+		<input type="password" name="" id="field-55ba09dadaed6" class="" placeholder="Password Placeholder (required,readonly)" aria-required="true" required readonly>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaed8">Password Input <em title="required">*</em></label>
+		<input type="password" name="" id="field-55ba09dadaed8" class="" aria-invalid="false" placeholder="Password Placeholder (required,invalid)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaed9">Password Input <em title="required">*</em></label>
+		<input type="password" name="" id="field-55ba09dadaed9" class="" aria-invalid="true" placeholder="Password Placeholder (required,invalid)" aria-required="true" required>
+		<p>This field is required</p>
+	</div>
+
+	<hr>
+
+	
+		<div class="row">
+		<label for="field-55ba09dadaedb">Search Input <em title="required">*</em></label>
+		<input type="search" name="" id="field-55ba09dadaedb" class="" placeholder="Search Placeholder (required)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaedd">Search Input <em title="required">*</em></label>
+		<input type="search" name="" id="field-55ba09dadaedd" class="" placeholder="Search Placeholder (required,disabled)" aria-required="true" required disabled>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaedf">Search Input <em title="required">*</em></label>
+		<input type="search" name="" id="field-55ba09dadaedf" class="" placeholder="Search Placeholder (required,readonly)" aria-required="true" required readonly>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaee1">Search Input <em title="required">*</em></label>
+		<input type="search" name="" id="field-55ba09dadaee1" class="" aria-invalid="false" placeholder="Search Placeholder (required,invalid)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaee3">Search Input <em title="required">*</em></label>
+		<input type="search" name="" id="field-55ba09dadaee3" class="" aria-invalid="true" placeholder="Search Placeholder (required,invalid)" aria-required="true" required>
+		<p>This field is required</p>
+	</div>
+
+	<hr>
+
+	
+		<div class="row">
+		<label for="field-55ba09dadaee5">Color Input <em title="required">*</em></label>
+		<input type="color" name="" id="field-55ba09dadaee5" class="" placeholder="Color Placeholder (required)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaee6">Color Input <em title="required">*</em></label>
+		<input type="color" name="" id="field-55ba09dadaee6" class="" placeholder="Color Placeholder (required,disabled)" aria-required="true" required disabled>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaee8">Color Input <em title="required">*</em></label>
+		<input type="color" name="" id="field-55ba09dadaee8" class="" placeholder="Color Placeholder (required,readonly)" aria-required="true" required readonly>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaeea">Color Input <em title="required">*</em></label>
+		<input type="color" name="" id="field-55ba09dadaeea" class="" aria-invalid="false" placeholder="Color Placeholder (required,invalid)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaeec">Color Input <em title="required">*</em></label>
+		<input type="color" name="" id="field-55ba09dadaeec" class="" aria-invalid="true" placeholder="Color Placeholder (required,invalid)" aria-required="true" required>
+		<p>This field is required</p>
+	</div>
+
+	<hr>
+
+	
+		<div class="row">
+		<label for="field-55ba09dadaeee">Date Input <em title="required">*</em></label>
+		<input type="date" name="" id="field-55ba09dadaeee" class="" placeholder="Date Placeholder (required)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaef6">Date Input <em title="required">*</em></label>
+		<input type="date" name="" id="field-55ba09dadaef6" class="" placeholder="Date Placeholder (required,disabled)" aria-required="true" required disabled>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaef8">Date Input <em title="required">*</em></label>
+		<input type="date" name="" id="field-55ba09dadaef8" class="" placeholder="Date Placeholder (required,readonly)" aria-required="true" required readonly>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaef9">Date Input <em title="required">*</em></label>
+		<input type="date" name="" id="field-55ba09dadaef9" class="" aria-invalid="false" placeholder="Date Placeholder (required,invalid)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaefb">Date Input <em title="required">*</em></label>
+		<input type="date" name="" id="field-55ba09dadaefb" class="" aria-invalid="true" placeholder="Date Placeholder (required,invalid)" aria-required="true" required>
+		<p>This field is required</p>
+	</div>
+
+	<hr>
+
+	
+		<div class="row">
+		<label for="field-55ba09dadaefd">Datetime Input <em title="required">*</em></label>
+		<input type="datetime" name="" id="field-55ba09dadaefd" class="" placeholder="Datetime Placeholder (required)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaeff">Datetime Input <em title="required">*</em></label>
+		<input type="datetime" name="" id="field-55ba09dadaeff" class="" placeholder="Datetime Placeholder (required,disabled)" aria-required="true" required disabled>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf01">Datetime Input <em title="required">*</em></label>
+		<input type="datetime" name="" id="field-55ba09dadaf01" class="" placeholder="Datetime Placeholder (required,readonly)" aria-required="true" required readonly>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf03">Datetime Input <em title="required">*</em></label>
+		<input type="datetime" name="" id="field-55ba09dadaf03" class="" aria-invalid="false" placeholder="Datetime Placeholder (required,invalid)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf04">Datetime Input <em title="required">*</em></label>
+		<input type="datetime" name="" id="field-55ba09dadaf04" class="" aria-invalid="true" placeholder="Datetime Placeholder (required,invalid)" aria-required="true" required>
+		<p>This field is required</p>
+	</div>
+
+	<hr>
+
+	
+		<div class="row">
+		<label for="field-55ba09dadaf06">Datetime-local Input <em title="required">*</em></label>
+		<input type="datetime-local" name="" id="field-55ba09dadaf06" class="" placeholder="Datetime-local Placeholder (required)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf08">Datetime-local Input <em title="required">*</em></label>
+		<input type="datetime-local" name="" id="field-55ba09dadaf08" class="" placeholder="Datetime-local Placeholder (required,disabled)" aria-required="true" required disabled>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf0a">Datetime-local Input <em title="required">*</em></label>
+		<input type="datetime-local" name="" id="field-55ba09dadaf0a" class="" placeholder="Datetime-local Placeholder (required,readonly)" aria-required="true" required readonly>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf0b">Datetime-local Input <em title="required">*</em></label>
+		<input type="datetime-local" name="" id="field-55ba09dadaf0b" class="" aria-invalid="false" placeholder="Datetime-local Placeholder (required,invalid)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf0d">Datetime-local Input <em title="required">*</em></label>
+		<input type="datetime-local" name="" id="field-55ba09dadaf0d" class="" aria-invalid="true" placeholder="Datetime-local Placeholder (required,invalid)" aria-required="true" required>
+		<p>This field is required</p>
+	</div>
+
+	<hr>
+
+	
+		<div class="row">
+		<label for="field-55ba09dadaf0f">month Input <em title="required">*</em></label>
+		<input type="month" name="" id="field-55ba09dadaf0f" class="" placeholder="month Placeholder (required)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf11">month Input <em title="required">*</em></label>
+		<input type="month" name="" id="field-55ba09dadaf11" class="" placeholder="month Placeholder (required,disabled)" aria-required="true" required disabled>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf13">month Input <em title="required">*</em></label>
+		<input type="month" name="" id="field-55ba09dadaf13" class="" placeholder="month Placeholder (required,readonly)" aria-required="true" required readonly>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf15">month Input <em title="required">*</em></label>
+		<input type="month" name="" id="field-55ba09dadaf15" class="" aria-invalid="false" placeholder="month Placeholder (required,invalid)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf16">month Input <em title="required">*</em></label>
+		<input type="month" name="" id="field-55ba09dadaf16" class="" aria-invalid="true" placeholder="month Placeholder (required,invalid)" aria-required="true" required>
+		<p>This field is required</p>
+	</div>
+
+	<hr>
+
+	
+		<div class="row">
+		<label for="field-55ba09dadaf18">Number Input <em title="required">*</em></label>
+		<input type="number" name="" id="field-55ba09dadaf18" class="" placeholder="Number Placeholder (required)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf1a">Number Input <em title="required">*</em></label>
+		<input type="number" name="" id="field-55ba09dadaf1a" class="" placeholder="Number Placeholder (required,disabled)" aria-required="true" required disabled>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf1c">Number Input <em title="required">*</em></label>
+		<input type="number" name="" id="field-55ba09dadaf1c" class="" placeholder="Number Placeholder (required,readonly)" aria-required="true" required readonly>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf1e">Number Input <em title="required">*</em></label>
+		<input type="number" name="" id="field-55ba09dadaf1e" class="" aria-invalid="false" placeholder="Number Placeholder (required,invalid)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf1f">Number Input <em title="required">*</em></label>
+		<input type="number" name="" id="field-55ba09dadaf1f" class="" aria-invalid="true" placeholder="Number Placeholder (required,invalid)" aria-required="true" required>
+		<p>This field is required</p>
+	</div>
+
+	<hr>
+
+	
+		<div class="row">
+		<label for="field-55ba09dadaf21">Tel Input <em title="required">*</em></label>
+		<input type="tel" name="" id="field-55ba09dadaf21" class="" placeholder="Tel Placeholder (required)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf23">Tel Input <em title="required">*</em></label>
+		<input type="tel" name="" id="field-55ba09dadaf23" class="" placeholder="Tel Placeholder (required,disabled)" aria-required="true" required disabled>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf25">Tel Input <em title="required">*</em></label>
+		<input type="tel" name="" id="field-55ba09dadaf25" class="" placeholder="Tel Placeholder (required,readonly)" aria-required="true" required readonly>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf26">Tel Input <em title="required">*</em></label>
+		<input type="tel" name="" id="field-55ba09dadaf26" class="" aria-invalid="false" placeholder="Tel Placeholder (required,invalid)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf28">Tel Input <em title="required">*</em></label>
+		<input type="tel" name="" id="field-55ba09dadaf28" class="" aria-invalid="true" placeholder="Tel Placeholder (required,invalid)" aria-required="true" required>
+		<p>This field is required</p>
+	</div>
+
+	<hr>
+
+	
+		<div class="row">
+		<label for="field-55ba09dadaf2c">Time Input <em title="required">*</em></label>
+		<input type="time" name="" id="field-55ba09dadaf2c" class="" placeholder="Time Placeholder (required)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf2e">Time Input <em title="required">*</em></label>
+		<input type="time" name="" id="field-55ba09dadaf2e" class="" placeholder="Time Placeholder (required,disabled)" aria-required="true" required disabled>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf30">Time Input <em title="required">*</em></label>
+		<input type="time" name="" id="field-55ba09dadaf30" class="" placeholder="Time Placeholder (required,readonly)" aria-required="true" required readonly>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf32">Time Input <em title="required">*</em></label>
+		<input type="time" name="" id="field-55ba09dadaf32" class="" aria-invalid="false" placeholder="Time Placeholder (required,invalid)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf34">Time Input <em title="required">*</em></label>
+		<input type="time" name="" id="field-55ba09dadaf34" class="" aria-invalid="true" placeholder="Time Placeholder (required,invalid)" aria-required="true" required>
+		<p>This field is required</p>
+	</div>
+
+	<hr>
+
+	
+		<div class="row">
+		<label for="field-55ba09dadaf36">Url Input <em title="required">*</em></label>
+		<input type="url" name="" id="field-55ba09dadaf36" class="" placeholder="Url Placeholder (required)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf37">Url Input <em title="required">*</em></label>
+		<input type="url" name="" id="field-55ba09dadaf37" class="" placeholder="Url Placeholder (required,disabled)" aria-required="true" required disabled>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf39">Url Input <em title="required">*</em></label>
+		<input type="url" name="" id="field-55ba09dadaf39" class="" placeholder="Url Placeholder (required,readonly)" aria-required="true" required readonly>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf3b">Url Input <em title="required">*</em></label>
+		<input type="url" name="" id="field-55ba09dadaf3b" class="" aria-invalid="false" placeholder="Url Placeholder (required,invalid)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf3d">Url Input <em title="required">*</em></label>
+		<input type="url" name="" id="field-55ba09dadaf3d" class="" aria-invalid="true" placeholder="Url Placeholder (required,invalid)" aria-required="true" required>
+		<p>This field is required</p>
+	</div>
+
+	<hr>
+
+	
+		<div class="row">
+		<label for="field-55ba09dadaf3f">Week Input <em title="required">*</em></label>
+		<input type="week" name="" id="field-55ba09dadaf3f" class="" placeholder="Week Placeholder (required)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf40">Week Input <em title="required">*</em></label>
+		<input type="week" name="" id="field-55ba09dadaf40" class="" placeholder="Week Placeholder (required,disabled)" aria-required="true" required disabled>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf42">Week Input <em title="required">*</em></label>
+		<input type="week" name="" id="field-55ba09dadaf42" class="" placeholder="Week Placeholder (required,readonly)" aria-required="true" required readonly>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf44">Week Input <em title="required">*</em></label>
+		<input type="week" name="" id="field-55ba09dadaf44" class="" aria-invalid="false" placeholder="Week Placeholder (required,invalid)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf46">Week Input <em title="required">*</em></label>
+		<input type="week" name="" id="field-55ba09dadaf46" class="" aria-invalid="true" placeholder="Week Placeholder (required,invalid)" aria-required="true" required>
+		<p>This field is required</p>
+	</div>
+
+	<hr>
+
+	
+		<div class="row">
+		<label for="field-55ba09dadaf48">File Input <em title="required">*</em></label>
+		<input type="file" name="" id="field-55ba09dadaf48" class="" placeholder="File Placeholder (required)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf49">File Input <em title="required">*</em></label>
+		<input type="file" name="" id="field-55ba09dadaf49" class="" placeholder="File Placeholder (required,disabled)" aria-required="true" required disabled>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf4b">File Input <em title="required">*</em></label>
+		<input type="file" name="" id="field-55ba09dadaf4b" class="" placeholder="File Placeholder (required,readonly)" aria-required="true" required readonly>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf4d">File Input <em title="required">*</em></label>
+		<input type="file" name="" id="field-55ba09dadaf4d" class="" aria-invalid="false" placeholder="File Placeholder (required,invalid)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf4f">File Input <em title="required">*</em></label>
+		<input type="file" name="" id="field-55ba09dadaf4f" class="" aria-invalid="true" placeholder="File Placeholder (required,invalid)" aria-required="true" required>
+		<p>This field is required</p>
+	</div>
+
+	<hr>
+
+	
+		<div class="row">
+		<label for="field-55ba09dadaf51">Range Input <em title="required">*</em></label>
+		<input type="range" name="" id="field-55ba09dadaf51" class="" placeholder="Range Placeholder (required)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf52">Range Input <em title="required">*</em></label>
+		<input type="range" name="" id="field-55ba09dadaf52" class="" placeholder="Range Placeholder (required,disabled)" aria-required="true" required disabled>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf54">Range Input <em title="required">*</em></label>
+		<input type="range" name="" id="field-55ba09dadaf54" class="" placeholder="Range Placeholder (required,readonly)" aria-required="true" required readonly>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf56">Range Input <em title="required">*</em></label>
+		<input type="range" name="" id="field-55ba09dadaf56" class="" aria-invalid="false" placeholder="Range Placeholder (required,invalid)" aria-required="true" required>
+	</div>
+
+		<div class="row">
+		<label for="field-55ba09dadaf58">Range Input <em title="required">*</em></label>
+		<input type="range" name="" id="field-55ba09dadaf58" class="" aria-invalid="true" placeholder="Range Placeholder (required,invalid)" aria-required="true" required>
+		<p>This field is required</p>
+	</div>
+
+	<hr>
+
+	
+	
+	
+	<div class="row">
+		<label for="">Select <em title="required">*</em></label>
+		<select name="" id="" class="" required>
+			<option value="">Please Select</option>
+		</select>
+	</div>
+
+	<div class="row">
+		<label for="">Select <em title="required">*</em></label>
+		<select name="" id="" class="" required disabled>
+			<option value="">Please Select</option>
+		</select>
+	</div>
+
+	<div class="row">
+		<label for="">Select <em title="required">*</em></label>
+		<select name="" id="" class="" required readonly>
+			<option value="">Please Select</option>
+		</select>
+	</div>
+
+	<div class="row">
+		<label for="">Select <em title="required">*</em></label>
+		<select name="" id="" aria-invalid="false" aria-required="true" required>
+			<option value="">Please Select</option>
+		</select>
+	</div>
+
+	<div class="row">
+		<label for="">Select <em title="required">*</em></label>
+		<select name="" id="" class="" aria-invalid="true" aria-required="true" required aria-invalid="true">
+			<option value="">Please Select</option>
+		</select>
+		<p>This field is required</p>
+	</div>
+
+	<hr>
+
+	
+	<div class="row">
+		<label for="">Select Multiple<em title="required">*</em></label>
+		<select name="" id="" class="" required multiple>
+			<option value="">Please Select</option>
+		</select>
+	</div>
+
+	<div class="row">
+		<label for="">Select Multiple<em title="required">*</em></label>
+		<select name="" id="" class="" required disabled multiple>
+			<option value="">Please Select</option>
+		</select>
+	</div>
+
+	<div class="row">
+		<label for="">Select Multiple<em title="required">*</em></label>
+		<select name="" id="" class="" required readonly multiple>
+			<option value="">Please Select</option>
+		</select>
+	</div>
+
+	<div class="row">
+		<label for="">Select Multiple<em title="required">*</em></label>
+		<select name="" id="" aria-invalid="false" aria-required="true" required multiple>
+			<option value="">Please Select</option>
+		</select>
+	</div>
+
+	<div class="row">
+		<label for="">Select Multiple<em title="required">*</em></label>
+		<select name="" id="" class="" aria-invalid="true" aria-required="true" required aria-invalid="true" multiple>
+			<option value="">Please Select</option>
+		</select>
+		<p>This field is required</p>
+	</div>
+
+	<hr>
+
+	
+	<div class="row">
+		<label for="">Textarea</label>
+		<textarea name="" id="" cols="30" rows="10" aria-required="true" required class=""></textarea>
+	</div>
+
+	<div class="row">
+		<label for="">Textarea</label>
+		<textarea name="" id="" cols="30" rows="10" aria-required="true" required aria-invalid="false"></textarea>
+	</div>
+
+	<div class="row">
+		<label for="">Textarea</label>
+		<textarea name="" id="" cols="30" rows="10" aria-required="true" required class="" aria-invalid="true"></textarea>
+		<p>This field is required</p>
+	</div>
+
+	<hr>
+
+	<div class="row">
+		<label for="">Checkbox Group</label>
+		<fieldset>
+			<ul class="list">
+				<li><input type="checkbox" name="bb" id="form-checkbox-1-1"><label for="form-checkbox-1-1">Checkbox</label></li>
+				<li><input type="checkbox" name="bb" id="form-checkbox-1-2"><label for="form-checkbox-1-2">Checkbox</label></li>
+				<li><input type="checkbox" name="bb" id="form-checkbox-1-3"><label for="form-checkbox-1-3">Checkbox</label></li>
+				<li><input type="checkbox" name="bb" id="form-checkbox-1-4" checked><label for="form-checkbox-1-4">Checkbox</label></li>
+				<li><input type="checkbox" name="bb" id="form-checkbox-1-5"><label for="form-checkbox-1-5">Checkbox</label></li>
+			</ul>
+		</fieldset>
+		<p>This field is required</p>
+	</div>
+
+	<hr>
+
+	<div class="row">
+		<label for="">Checkbox Group</label>
+		<fieldset>
+			<ul class="list list--inline">
+				<li><input type="checkbox" name="bb" id="form-checkbox-2-1"><label for="form-checkbox-2-1">Checkbox</label></li>
+				<li><input type="checkbox" name="bb" id="form-checkbox-2-2"><label for="form-checkbox-2-2">Checkbox</label></li>
+				<li><input type="checkbox" name="bb" id="form-checkbox-2-3"><label for="form-checkbox-2-3">Checkbox</label></li>
+				<li><input type="checkbox" name="bb" id="form-checkbox-2-4" checked><label for="form-checkbox-2-4">Checkbox</label></li>
+				<li><input type="checkbox" name="bb" id="form-checkbox-2-5"><label for="form-checkbox-2-5">Checkbox</label></li>
+			</ul>
+		</fieldset>
+		<p>This field is required</p>
+	</div>
+
+	<hr>
+
+	<div class="row">
+		<label for="">Radio Group</label>
+		<fieldset>
+			<ul class="list">
+				<li><input type="radio" name="aa" id="form-radio-1"><label for="form-radio-1">Radio</label></li>
+				<li><input type="radio" name="aa" id="form-radio-2" disabled><label for="form-radio-2">Radio (disabled)</label></li>
+				<li><input type="radio" name="aa" id="form-radio-3"><label for="form-radio-3">Radio</label></li>
+				<li><input type="radio" name="aa" id="form-radio-4" checked><label for="form-radio-4">Radio</label></li>
+				<li><input type="radio" name="aa" id="form-radio-5"><label for="form-radio-5">Radio</label></li>
+			</ul>
+		</fieldset>
+		<p>This field is required</p>
+	</div>
+
+	<hr>
+
+	<p><input type="checkbox" name="" id=""> <label for="">I accept the <a href="#">terms and conditions</a>.</label></p>
+
+	<hr>
+
+	<button>Button</button>
+	<input type="button" value="Button">
+	<input type="submit" value="Button">
+	<input type="reset" value="Reset">
+	<input type="image" value="image">
+
+	<progress value="10" max="100"></progress><span>JavaScript/jQuery</span>
+	<progress value="70" max="100"></progress><span>HTML5/CSS3</span>
+	<progress value="60" max="100"></progress><span>NodeJS</span>
+	<progress value="70" max="100"></progress><span>Java/PHP</span>
+	<progress value="60" max="100"></progress><span>MySQL</span>
+	<progress value="80" max="100"></progress><span>Photoshop</span>
+
+	<!-- http://codepen.io/pankajparashar/pen/GnFpA -->
+	<meter></meter>
+	<meter value=".5"></meter>
+	<meter value="1"></meter>
+	<meter value="5"></meter>
+	<meter value="-.5"></meter>
+	<meter value="0"></meter>
+	<meter value=".5"></meter>
+	<meter value=".5" high=".8"></meter>
+	<meter value=".8" high=".8"></meter>
+	<meter value=".9" high=".8"></meter>
+	<meter value=".15" low=".25"></meter>
+	<meter value=".25" low=".25"></meter>
+	<meter value=".5" low=".25"></meter>
+	<meter low=".25" optimum=".15" high=".75" value=".5"></meter>
+	<meter low=".25" optimum=".5" high=".75" value=".5"></meter>
+	<meter low=".25" optimum=".85" high=".75" value=".5"></meter>
+	<meter low=".25" optimum=".8" high=".75" value=".2"></meter>
+	<meter low=".25" optimum=".2" high=".75" value=".8"></meter
+
+
+
+</form>
+</main>

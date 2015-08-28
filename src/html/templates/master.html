@@ -1,0 +1,35 @@
+{{= it.include("head", {title:it.document.title}) }}
+<body>
+
+<header class="header" role="banner">
+	<h1>{{= it.title}} {{= it.document.title}}</h1>
+</header>
+
+{{= it.document }}
+
+<aside class="sidebar" role="complementary">
+</aside>
+
+<footer class="footer" role="contentinfo">
+</footer>
+
+<!-- bower:js -->
+<!-- endbower -->
+
+<!--site js-->
+<script src="assets/js/app.js"></script>
+<!--analytics-->
+<!-- ... -->
+
+<script>
+var db = document.getElementById('databound');
+if(db){
+	rivets.bind(
+		db, 
+		{data: window.data}
+	);
+}
+</script>
+
+</body>
+</html>

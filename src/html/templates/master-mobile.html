@@ -1,0 +1,41 @@
+{{= it.include("head", {title:it.document.title}) }}
+<body>
+<div class="page">
+	
+	{{= it.include("mobilenav") }}
+	
+	<div class="page__body">
+		<header class="header" role="banner">
+			<h1>{{= it.title}} {{= it.document.title}}</h1>
+		</header>
+
+		{{= it.document }}
+
+		<aside class="sidebar" role="complementary">
+			<div id="databound">
+				<input rv-value="data.title" style="margin-top:1em;width:10em;" />
+				<p>{ data.title }</p>
+			</div>
+		</aside>
+
+		<footer class="footer" role="contentinfo">
+		</footer>
+	</div>
+</div>
+<!-- bower:js -->
+<!-- endbower -->
+
+<!--site js-->
+<script src="assets/js/app.js"></script>
+<!--analytics-->
+<!-- ... -->
+
+<script>
+rivets.bind(
+	document.getElementById('databound'), 
+	{data: window.data}
+);
+</script>
+
+</body>
+</html>

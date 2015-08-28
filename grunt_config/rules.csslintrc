@@ -1,0 +1,48 @@
+{
+    "_COMMENT": "ONLY FOR IE6",
+    "adjoining-classes": false,
+
+    "_COMMENT": "ONLY FOR IE6 7",
+    "box-sizing": false,
+
+    "_COMMENT": "ONLY FOR IE6 7 8",
+    "fallback-colors": false,
+
+    "_COMMENT": "HANDLE WITH GRUNT",
+    "compatible-vendor-prefixes": false,
+
+    "_COMMENT": "VALID",
+    "known-properties": false,
+    "errors": false,
+    "empty-rules": false,
+    "selector-max-approaching": false,
+    "gradients": false,
+    "selector-max": false,
+    "shorthand": false,
+
+    "_COMMENT": "DONT VALIDATE BELOW - PROJECT SPECIFIC",
+    "important": false,
+    "box-model": false,
+    "overqualified-elements": false,
+    "display-property-grouping": false,
+    "bulletproof-font-face": false,
+    "regex-selectors": false,
+    "duplicate-background-images": false,
+    "duplicate-properties": false,
+    "font-sizes": false,
+    "font-faces": false,
+    "floats": false,
+    "star-property-hack": false,
+    "outline-none": false,
+    "import": false,
+    "ids": false,
+    "underscore-property-hack": false,
+    "rules-count": false,
+    "qualified-headings": false,
+    "text-indent": false,
+    "unique-headings": false,
+    "universal-selector": false,
+    "unqualified-attributes": false,
+    "vendor-prefix": false,
+    "zero-units": false
+}
