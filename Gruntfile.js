@@ -503,7 +503,7 @@ module.exports = function(grunt) {
 			    },
 			},
 			html:{
-				files: ['./src/html/**/*.html'],
+				files: ['src/html/**/*.html'],
 			    tasks: ['zetzer'],
 			    options: {
 			      spawn: false,
