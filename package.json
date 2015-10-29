@@ -44,7 +44,7 @@
     "grunt-newer": "^1.1.1",
     "grunt-open": "^0.2.3",
     "grunt-postcss": "^0.5.5",
-    "grunt-real-favicon": "0.0.4",
+    "grunt-real-favicon": "0.1.2",
     "grunt-sass": "~1.0.0",
     "grunt-sass-convert": "^0.2.0",
     "grunt-stripmq": "0.0.6",

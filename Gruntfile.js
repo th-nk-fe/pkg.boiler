@@ -444,26 +444,28 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		real_favicon: {
-			my_icon: {
+		realFavicon: {
+   			myIcon: {
 				src: 'src/favicon/favicon.png',
 				dest: 'public/assets/favicons',
-				icons_path: '/assets/favicons',
-				html: ['src/html/partials/favicons.html'],
-				design: {
-					ios: {
-						//picture_aspect: 'background_and_margin',
-						//background_color: '#654321',
-						//margin: 4
+				options:{
+					icons_path: '/assets/favicons',
+					html: ['src/html/partials/favicons.html'],
+					design: {
+						ios: {
+							//picture_aspect: 'background_and_margin',
+							//background_color: '#654321',
+							//margin: 4
+						},
+						windows: {
+							//picture_aspect: 'white_silhouette',
+							//background_color: '#123456'
+						}
 					},
-					windows: {
-						//picture_aspect: 'white_silhouette',
-						//background_color: '#123456'
+					settings: {
+						compression: 5,
+						scaling_algorithm: 'NearestNeighbor'
 					}
-				},
-				settings: {
-					compression: 5,
-					scaling_algorithm: 'NearestNeighbor'
 				}
 			}
 		},
