@@ -65,6 +65,7 @@
 	"watchers":["watch:css", 
 				"watch:js",
 				"watch:html",
+				"watch:images",
 				"watch:deps",
 				"watch:favicon",
 				"watch:svgmin",

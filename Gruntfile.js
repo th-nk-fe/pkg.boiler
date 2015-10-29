@@ -511,6 +511,13 @@ module.exports = function(grunt) {
 			      spawn: false,
 			    },
 			},
+			images:{
+				files: ['src/images/**/*.*','src/scss/images/**/*.*'],
+			    tasks: ['imagemin'],
+			    options: {
+			      spawn: false,
+			    },
+			},
 			deps:{
 				files: ['public/**/*.html'],
 			    tasks: ['wiredep'],
