@@ -11,7 +11,7 @@
 		"tasks":{
 			"exec:js":true,
 			"browserify:babel":true,
-			"newer:jscs":true,
+			"newer:jscs":false,
 			"newer:eslint":true,
 			"newer:uglify":true
 		}
@@ -38,28 +38,28 @@
 	"icons":{
 		"tasks":{
 			"real_favicon":true,
-			"svgmin:icons":true,
-			"grunticon:build":true
+			"svgmin:icons":false,
+			"grunticon:build":false
 		}
 	},
 	"images":{
 		"tasks":{
 			"newer:imagemin":true,
-			"newer:webp":true
+			"newer:webp":false
 		}
 	},
 	"docs":{
 		"devonly":true,
 		"tasks":{
 			"jsdoc":true,
-			"exec:styleguide":true,
-			"phantomas":true
+			"exec:styleguide":false,
+			"phantomas":false
 		}
 	},
 	"tests":{
 		"tasks":{
-			"phantomcss":true,
-			"karma":true
+			"phantomcss":false,
+			"karma":false
 		}
 	},
 	"watchers":["watch:css", 

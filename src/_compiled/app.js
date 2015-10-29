@@ -12,10 +12,9 @@ var _libComponentsPkgCarouselCarousel = require('../../lib/components/pkg.carous
 
 var _libComponentsPkgModalModal = require('../../lib/components/pkg.modal/modal');
 
-/*
-var $ = require('../../lib/components/jquery/dist/jquery.js');
-console.log($);
-*/
+require('./thirdparty/slick.js');
+
+require('jquery');
 
 var worker = new Worker('/assets/js/webworkers/worker.js');
 worker.onmessage = function (e) {

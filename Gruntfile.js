@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 		    }
 		},
 		clean: {
-			build: ['./docs','./lib','./public/assets/components'],
+			build: ['./docs',/*'./lib',*/'./public/assets/components'],
 		},
 		karma: {
             unit: {
@@ -226,7 +226,7 @@ module.exports = function(grunt) {
 		        src: ['public/**/*.html']
 		    }
 		},
-		phantomcss:{
+		/*phantomcss: {
 			test: {
 				options: {
 					screenshots: './test/cssregression/baselines',
@@ -237,7 +237,7 @@ module.exports = function(grunt) {
 					'test/cssregression/phantomcss.js'
 				]
 			}
-		},
+		},*/
 		/**
 		css
 		*/
@@ -373,7 +373,7 @@ module.exports = function(grunt) {
 		        }
 		    }
 		},
-		phantomas: {
+		/*phantomas: {
 			site : {
 				options : {
 					indexPath : './docs/performance/',
@@ -382,7 +382,7 @@ module.exports = function(grunt) {
 					buildUi   : true
 				}
 			}
-		},
+		},*/
 		/**
 		html
 		*/

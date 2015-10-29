@@ -1,3 +1,5 @@
+require('jquery');
+
 import {Collapse} from '../../lib/components/pkg.collapse/collapse';
 import {MobileNav} from '../../lib/components/pkg.mobilenav/mobilenav';
 import {Ajax} from '../../lib/components/js.ajax/ajax';
@@ -5,10 +7,7 @@ import {Tooltips} from '../../lib/components/pkg.tooltip/tooltip';
 import {Carousel} from '../../lib/components/pkg.carousel/carousel';
 import {Modal} from '../../lib/components/pkg.modal/modal';
 
-/*
-var $ = require('../../lib/components/jquery/dist/jquery.js');
-console.log($);
-*/
+import './thirdparty/slick.js';
 
 let worker = new Worker('/assets/js/webworkers/worker.js');
 worker.onmessage = function(e) {
