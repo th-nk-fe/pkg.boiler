@@ -1,0 +1,16 @@
+/// Return...
+/// @param {Number} $background-color - ...
+/// @group framework
+/// @author Michael Ord
+@function text-color
+(
+    $background-color
+)
+{
+	@if(lightness($background-color) < 50%)
+	{
+		@return #fff;
+	}
+
+	@return #000;
+}

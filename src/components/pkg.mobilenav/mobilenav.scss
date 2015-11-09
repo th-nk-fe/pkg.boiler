@@ -1,0 +1,377 @@
+/*
+MobileNav
+
+2 styles of menu are available.  A push menu will push the page content as the menu opens.  A slide menu will appear over the top.
+
+As you can see in the example below a wrapping element is needed (.page) to make this work.  Transforms are applied to this element when using push navigation.
+
+Styleguide 2.3
+*/
+
+
+$easing: ease-in-out;
+$speed: 0.5s;
+
+$menu-size: 90%;
+
+$nav-menu-padding:                      2em 0;
+$nav-menu-item-padding:                 1em 0;
+$nav-menu-font:                         "";
+$nav-menu-fontcolor:                    #fff;
+$nav-menu-fontcolor-active:             #f9f;
+$nav-menu-fontcolor-hover:              #ff9;
+
+h1 {
+    margin-top:0;
+    padding-top:0.6em
+}
+
+html, body {
+    height:100%;   
+}
+
+.page {
+    width:100%;
+    -moz-transition: transform $speed $easing;
+    -o-transition: transform $speed $easing;
+    -webkit-transition: -webkit-transform $speed $easing;
+    transition: transform $speed $easing;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+
+    position:relative;
+}
+
+.page__body {
+    height:100%;
+}
+
+/*
+Page Nav
+
+The mobile navigation element.  Can be positioned and revealed as required using the data attributes shown below.  On page load the navigation is defaulted as invisible - the javascript applies a .page__nav--ready class once the menu is positioned correctly..  This is to ensure no transitions are seen prior to the menu being requested.  
+
+Triggers (.page__nav-show) can be created using the same data attributes as the navigation itself.
+
+NOTE: Click the expand link to view this in its full glory.  You can also view mobilenav-example.html on port 8080 for further examples (http://localhost:8080/mobilenav-example.html)
+
+Markup:
+<div class='page'>
+    <nav role="navigation" class="page__nav" data-position="right" data-reveal-type="push">
+        <button class="page__nav-close">Close</button>
+        <ul class="nav-menu">
+            <li class="nav-menu__item">
+                <a class="nav-menu__link" href="">Home</a>
+            </li>
+            <li class="nav-menu__item">
+                <a class="nav-menu__link" href="">News</a>
+            </li>
+            <li class="nav-menu__item">
+                <a class="nav-menu__link" href="">Media</a>
+            </li>
+            <li class="nav-menu__item">
+                <a class="nav-menu__link" href="">About</a>
+            </li>
+        </ul>        
+    </nav>
+    <div class='page__body'>
+        <h1>Page Content</h1>
+        <button class="page__nav-show" data-reveal-type="push" data-position="right">Push Right Menu</button>
+    </div>
+</div>
+
+Styleguide 2.3.1
+*/
+
+.page__nav {
+    display: block;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background:#000;
+    color: #fff;
+
+    -moz-transition: transform $speed $easing;
+    -o-transition: transform $speed $easing;
+    -webkit-transition: -webkit-transform $speed $easing;
+    transition: transform $speed $easing;
+
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-perspective: 1000;
+    -ms-perspective: 1000;
+    -webkit-perspective: 1000;
+
+    z-index: 1;
+    visibility: hidden;
+
+    overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
+
+    &--top {
+        width: 100%;
+        height: $menu-size;
+        top: 0;
+        bottom: auto;
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+
+    }
+
+    &--right {
+        height: 100%;
+        width: $menu-size;
+        right: 0;
+        left: auto;
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+
+    }
+
+    &--bottom {
+        width: 100%;
+        height: $menu-size;
+        bottom: 0;
+        top: auto;
+        -moz-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        -o-transform: translateY(100%);
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+
+    }
+
+    &--left {
+        height: 100%;
+        width: $menu-size;
+        left: 0;
+        right: auto;
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+
+    }
+
+    
+}
+
+/* helper classes */
+
+.page__nav--ready {
+    visibility: visible;
+}
+
+body.restrict-height{
+    height:100%;
+    overflow:hidden;
+    
+    .page {
+        height:100%;
+    }
+}
+
+
+/* no point showing an active state on page load - you can see the active state on the page nav demo */
+
+.show-menu {
+    &--slide-top {
+        .page__nav--top {
+            -moz-transform: translateX(0) translateY(0);
+            -ms-transform: translateX(0) translateY(0);
+            -o-transform: translateX(0) translateY(0);
+            -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+            z-index: 2;
+        }
+
+        .page__body {
+            pointer-events:none;
+        }
+    }
+
+    &--slide-right {
+        .page__nav--right {
+            -moz-transform: translateX(0) translateY(0);
+            -ms-transform: translateX(0) translateY(0);
+            -o-transform: translateX(0) translateY(0);
+            -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+            z-index: 2;
+
+
+        }
+
+        .page__body {
+            pointer-events:none;
+        }
+    }
+
+    &--slide-bottom {
+        .page__nav--bottom {
+            -moz-transform: translateX(0) translateY(0);
+            -ms-transform: translateX(0) translateY(0);
+            -o-transform: translateX(0) translateY(0);
+            -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+            z-index: 2;
+        }
+
+        .page__body {
+            pointer-events:none;
+        }
+    }
+
+    &--slide-left {
+        .page__nav--left {
+            -moz-transform: translateX(0) translateY(0);
+            -ms-transform: translateX(0) translateY(0);
+            -o-transform: translateX(0) translateY(0);
+            -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+            z-index: 2;
+        }
+
+        .page__body {
+            pointer-events:none;
+        }
+    }
+
+    &--push-right {           
+
+            -moz-transform: translateX(-$menu-size) translateY(0);
+            -ms-transform: translateX(-$menu-size) translateY(0);
+            -o-transform: translateX(-$menu-size) translateY(0);
+            -webkit-transform: translateX(-$menu-size) translateY(0);
+            transform: translateX(-$menu-size) translateY(0);
+
+            .page__nav--right[data-reveal-type='push'] {
+                z-index: 2;
+            } 
+
+            .page__body {
+                pointer-events:none;
+            }
+    }
+
+     &--push-left {
+            -moz-transform: translateX($menu-size) translateY(0);
+            -ms-transform: translateX($menu-size) translateY(0);
+            -o-transform: translateX($menu-size) translateY(0);
+            -webkit-transform: translateX($menu-size) translateY(0);
+            transform: translateX($menu-size) translateY(0);  
+
+            .page__nav--left[data-reveal-type='push'] {
+                z-index: 2;
+            } 
+
+            .page__body {
+                pointer-events:none;
+            }
+            
+    }
+
+    &--push-top {
+            -moz-transform: translateX(0) translateY($menu-size);
+            -ms-transform: translateX(0) translateY($menu-size);
+            -o-transform: translateX(0) translateY($menu-size);
+            -webkit-transform: translateX(0) translateY($menu-size);
+            transform: translateX(0) translateY($menu-size);
+
+            .page__nav--top[data-reveal-type='push'] {
+                z-index: 2;
+            }
+
+            .page__body {
+                pointer-events:none;
+            }
+    }
+
+     &--push-bottom {
+            -moz-transform: translateX(0) translateY(-$menu-size);
+            -ms-transform: translateX(0) translateY(-$menu-size);
+            -o-transform: translateX(0) translateY(-$menu-size);
+            -webkit-transform: translateX(0) translateY(-$menu-size);
+            transform: translateX(0) translateY(-$menu-size);            
+
+            .page__nav--bottom[data-reveal-type='push'] {
+                z-index: 2;
+            }
+
+            .page__body {
+                pointer-events:none;
+            } 
+    }
+}
+
+
+
+/*
+Basic Mobile Menu Styles
+
+Markup:
+<ul class="nav-menu">
+    <li class="nav-menu__item">
+        <a class="nav-menu__link" href="">Home</a>
+    </li>
+    <li class="nav-menu__item">
+        <a class="nav-menu__link" href="">News</a>
+    </li>
+    <li class="nav-menu__item">
+        <a class="nav-menu__link" href="">Media</a>
+    </li>
+    <li class="nav-menu__item">
+        <a class="nav-menu__link" href="">About</a>
+    </li>
+</ul>       
+
+Styleguide 2.3.2
+*/
+
+.nav-menu {
+    background:                     #000;
+    list-style-type:                none;
+    padding:                        0;
+    width:                          100%;
+    height:                         100%;
+    padding:                        $nav-menu-padding;
+    font:                           $nav-menu-font;
+}
+
+.nav-menu__item {
+    list-style-type: none;
+    margin:0;
+    padding:                        $nav-menu-item-padding;
+}
+
+.nav-menu__link {
+    color:                          $nav-menu-fontcolor;
+    text-align:center;
+    display:block;
+    width:100%;
+    text-decoration:                none;
+}
+
+.nav-menu__link:hover {
+    color:                          $nav-menu-fontcolor-hover;
+    text-decoration:                none;
+}
+
+.nav-menu__link:active {
+    color:                          $nav-menu-fontcolor-active;
+    text-decoration:                none;
+}
+
+
+
+

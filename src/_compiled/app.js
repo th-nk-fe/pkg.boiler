@@ -15,6 +15,13 @@ var _libComponentsPkgModalModal = require('../../lib/components/pkg.modal/modal'
 require('./thirdparty/slick.js');
 
 require('jquery');
+require('modernizr');
+
+console.log('modernizr');
+console.log(typeof Modernizr.load);
+console.dir(Modernizr);
+console.log($('h1'));
+console.log('test ???');
 
 var worker = new Worker('/assets/js/webworkers/worker.js');
 worker.onmessage = function (e) {

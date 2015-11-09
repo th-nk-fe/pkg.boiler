@@ -1,0 +1,45 @@
+
+/*
+html
+
+The html element represents the root of an HTML document.
+
+*/
+html
+{
+	overflow-y 					:scroll;
+	min-height 					:100%;
+
+	-webkit-text-size-adjust 	:100%;
+		-ms-text-size-adjust 	:100%;
+
+	-moz-osx-font-smoothing		:grayscale;
+	 -webkit-font-smoothing 	:antialiased;
+
+	 -webkit-tap-highlight-color	:rgba(0,0,0,0);
+}
+
+// Box Sizing
+// =============================================================================
+// @notes
+// A more considered reset; more of a restart...
+// As per: csswizardry.com/2011/10/reset-restarted
+html
+{
+	box-sizing					:border-box;
+}
+
+*
+{
+	&, &:before, &:after
+	{
+		box-sizing 				:inherit;
+	}
+}
+
+*
+{
+	outline 					:none;
+	background-position			:0 0;
+	background-repeat			:no-repeat;
+}

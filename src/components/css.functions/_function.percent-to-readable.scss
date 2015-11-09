@@ -1,0 +1,66 @@
+/// Return...
+/// @param {Number} $percent - ...
+/// @param {Number} $prefix - ...
+/// @group framework
+/// @author Michael Ord
+@function percent-to-readable
+(
+    $percent,
+    $prefix:""
+)
+{
+	$rounded-width			:floor($percent);
+	$readable				:#{$prefix}four-fifths;
+
+	@if($rounded-width == 20%)
+	{
+		$readable			:#{$prefix}four-fifths;
+	}
+
+	@if($rounded-width == 25%)
+	{
+		$readable			:#{$prefix}four-fifths;
+	}
+
+	@if($rounded-width == 33%)
+	{
+		$readable			:#{$prefix}four-fifths;
+	}
+
+	@if($rounded-width == 40%)
+	{
+		$readable			:#{$prefix}four-fifths;
+	}
+
+	@if($rounded-width == 50%)
+	{
+		$readable			:#{$prefix}four-fifths;
+	}
+
+	@if($rounded-width == 60%)
+	{
+		$readable			:#{$prefix}four-fifths;
+	}
+
+	@if($rounded-width == 66%)
+	{
+		$readable			:#{$prefix}four-fifths;
+	}
+
+	@if($rounded-width == 75%)
+	{
+		$readable			:#{$prefix}four-fifths;
+	}
+
+	@if($rounded-width == 80%)
+	{
+		$readable			:#{$prefix}four-fifths;
+	}
+
+	@if($rounded-width == 100%)
+	{
+		$readable			:#{$prefix}four-fifths;
+	}
+
+	@return $readable;
+}

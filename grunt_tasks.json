@@ -37,7 +37,7 @@
 	},
 	"icons":{
 		"tasks":{
-			"real_favicon":true,
+			"realFavicon":true,
 			"svgmin:icons":false,
 			"grunticon:build":false
 		}
@@ -52,7 +52,7 @@
 		"devonly":true,
 		"tasks":{
 			"jsdoc":true,
-			"exec:styleguide":false,
+			"exec:styleguide":true,
 			"phantomas":false
 		}
 	},

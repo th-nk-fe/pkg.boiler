@@ -1,0 +1,53 @@
+/*
+Links
+
+Styleguide 0.6
+*/
+
+$link-color 					:purple !default;
+$link-hover-color 				:green !default;
+$link-hover-decoration			:underline !default;
+
+/*
+a
+
+If the a element has an href attribute, then it represents a hyperlink (a hypertext anchor). If the a element has no href attribute, then the element represents a placeholder for where a link might otherwise have been placed, if it had been relevant.
+The target, rel, media, hreflang, and type attributes must be omitted if the href attribute is not present.
+
+Markup:
+<a href="http://think.eu/">TH_NK</a>
+
+Styleguide 0.6.1
+*/
+a
+{
+	color 						:$link-color;
+	text-decoration 			:none;
+
+	&:hover,
+	&:focus
+	{
+		color					:$link-hover-color;
+		text-decoration 		:$link-hover-decoration;
+	}
+
+	&:focus
+	{
+		@extend %tab-focus;
+	}
+
+	&:before,
+	&:after
+	{
+		text-decoration			:none;
+	}
+
+	// TODO - link styles based on attributes
+	&[href*="mailto:"]
+	{
+		&:before
+		{
+		//	content				:"@";
+		}
+	}
+}

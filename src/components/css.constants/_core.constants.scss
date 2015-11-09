@@ -1,0 +1,830 @@
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$clr-xs							:#9b59b6;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$clr-sm							:#f39c12;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$clr-md							:#1abc9c;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$clr-lg							:#d6080d;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$clr-xl							:#3498db;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$gray-base						:#000;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$gray-darker					:lighten($gray-base, 13.5%); // #222
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$gray-dark						:lighten($gray-base, 20%);   // #333
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$gray							:lighten($gray-base, 33.5%); // #555
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$gray-light						:lighten($gray-base, 46.7%); // #777
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$gray-lighter					:lighten($gray-base, 93.5%); // #eee
+
+// Cubic
+$ease-in-cubic					:cubic-bezier(0.550, 0.055, 0.675, 0.190);
+$ease-out-cubic					:cubic-bezier(0.215, 0.610, 0.355, 1.000);
+$ease-in-out-cubic				:cubic-bezier(0.645, 0.045, 0.355, 1.000);
+
+// Circ
+$ease-in-circ					:cubic-bezier(0.600, 0.040, 0.980, 0.335);
+$ease-out-circ					:cubic-bezier(0.075, 0.820, 0.165, 1.000);
+$ease-in-out-circ				:cubic-bezier(0.785, 0.135, 0.150, 0.860);
+
+// Expo
+$ease-in-expo					:cubic-bezier(0.950, 0.050, 0.795, 0.035);
+$ease-out-expo					:cubic-bezier(0.190, 1.000, 0.220, 1.000);
+$ease-in-out-expo				:cubic-bezier(1.000, 0.000, 0.000, 1.000);
+
+// Quad
+$ease-in-quad					:cubic-bezier(0.550, 0.085, 0.680, 0.530);
+$ease-out-quad					:cubic-bezier(0.250, 0.460, 0.450, 0.940);
+$ease-in-out-quad				:cubic-bezier(0.455, 0.030, 0.515, 0.955);
+
+// Quart
+$ease-in-quart					:cubic-bezier(0.895, 0.030, 0.685, 0.220);
+$ease-out-quart					:cubic-bezier(0.165, 0.840, 0.440, 1.000);
+$ease-in-out-quart				:cubic-bezier(0.770, 0.000, 0.175, 1.000);
+
+// Quint
+$ease-in-quint					:cubic-bezier(0.755, 0.050, 0.855, 0.060);
+$ease-out-quint					:cubic-bezier(0.230, 1.000, 0.320, 1.000);
+$ease-in-out-quint				:cubic-bezier(0.860, 0.000, 0.070, 1.000);
+
+// Sine
+$ease-in-sine					:cubic-bezier(0.470, 0.000, 0.745, 0.715);
+$ease-out-sine					:cubic-bezier(0.390, 0.575, 0.565, 1.000);
+$ease-in-out-sine				:cubic-bezier(0.445, 0.050, 0.550, 0.950);
+
+// Back
+$ease-in-back					:cubic-bezier(0.600, -0.280, 0.735, 0.045);
+$ease-out-back					:cubic-bezier(0.175, 0.885, 0.320, 1.275);
+$ease-in-out-back				:cubic-bezier(0.680, -0.550, 0.265, 1.550);
+
+/// Media query for any iPad
+/// @group framework
+/// @access private
+/// @type String
+$device-ipad-any				:"only screen and (min-device-width:768px) and (max-device-width:1024px)";
+
+/// Media query for any iPad in landscape
+/// @group framework
+/// @access private
+/// @type String
+$device-ipad-any-landscape		:"only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape)";
+
+/// Media query for any iPad in portrait
+/// @group framework
+/// @access private
+/// @type String
+$device-ipad-any-portrait		:"only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait)";
+
+/// Media query for iPad 3G & 4G
+/// @group framework
+/// @access private
+/// @type String
+$device-ipad-4g					:"only screen and (min-device-width:768px) and (max-device-width:1024px) and (-webkit-min-device-pixel-ratio:2)";
+
+/// Media query for iPad 3G & 4G in landscape
+/// @group framework
+/// @access private
+/// @type String
+$device-ipad-4g-landscape		:"only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio:2)";
+
+/// Media query for iPad 3G & 4G in portrait
+/// @group framework
+/// @access private
+/// @type String
+$device-ipad-4g-portrait		:"only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio:2)";
+
+/// Media query for iPad 1G & 2G
+/// @group framework
+/// @access private
+/// @type String
+$device-ipad-2g					:"only screen and (min-device-width:768px) and (max-device-width:1024px) and (-webkit-min-device-pixel-ratio:1)";
+
+/// Media query for iPad 1G & 2G in landscape
+/// @group framework
+/// @access private
+/// @type String
+$device-ipad-2g-landscape		:"only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio:1)";
+
+/// Media query for iPad 1G & 2G in portrait
+/// @group framework
+/// @access private
+/// @type String
+$device-ipad-2g-portrait		:"only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio:1)";
+
+/// Media query for iPad mini
+/// @group framework
+/// @access private
+/// @type String
+$device-ipad-mini-any			:"and (min-device-width:768px) and (max-device-width:1024px) and (-webkit-min-device-pixel-ratio:1)";
+
+/// Media query for iPad mini in landscape
+/// @group framework
+/// @access private
+/// @type String
+$device-ipad-mini-any-landscape	:"and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio:1)";
+
+/// Media query for iPad mini in portrait
+/// @group framework
+/// @access private
+/// @type String
+$device-ipad-mini-any-portrait	:"and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio:1)";
+
+/// Media query for iPhone 5
+/// @group framework
+/// @access private
+/// @type String
+$device-iphone5					:"only screen and (min-device-width:320px) and (max-device-width:568px)";
+
+/// Media query for iPhone 5 in landscape
+/// @group framework
+/// @access private
+/// @type String
+$device-iphone5-landscape		:"only screen and (min-device-width:320px) and (max-device-width:568px) and (orientation:landscape)";
+
+/// Media query for iPhone 5 in portrait
+/// @group framework
+/// @access private
+/// @type String
+$device-iphone5-portrait		:"only screen and (min-device-width:320px) and (max-device-width:568px) and (orientation:portrait)";
+
+/// Media query for iPhone 2G, 3G, 4, 4S
+/// @group framework
+/// @access private
+/// @type String
+$device-iphone					:"only screen and (min-device-width:320px) and (max-device-width:480)";
+
+/// Media query for iPhone 2G, 3G, 4, 4S in landscape
+/// @group framework
+/// @access private
+/// @type String
+$device-iphone-landscape		:"only screen and (min-device-width:320px) and (max-device-width:480) and (orientation:landscape)";
+
+/// Media query for iPhone 2G, 3G, 4, 4S in portrait
+/// @group framework
+/// @access private
+/// @type String
+$device-iphone-portrait			:"only screen and (min-device-width:320px) and (max-device-width:480) and (orientation:portrait)";
+
+/// Media query for iPhone 6
+/// @group framework
+/// @access private
+/// @type String
+$device-iphone6					:"only screen and (min-device-width:375px) and (max-device-width:667px)";
+
+/// Media query for iPhone 6 in landscape
+/// @group framework
+/// @access private
+/// @type String
+$device-iphone6-landscape		:"only screen and (min-device-width:375px) and (max-device-width:667px) and (orientation:landscape)";
+
+/// Media query for iPhone 6 in portrait
+/// @group framework
+/// @access private
+/// @type String
+$device-iphone6-portrait		:"only screen and (min-device-width:375px) and (max-device-width:667px) and (orientation:portrait)";
+
+/// Media query for iPhone 6+
+/// @group framework
+/// @access private
+/// @type String
+$device-iphone6plus				:"only screen and (min-device-width:414px) and (max-device-width:736px)";
+
+/// Media query for iPhone 6+ in landscape
+/// @group framework
+/// @access private
+/// @type String
+$device-iphone6plus-landscape	:"only screen and (min-device-width:414px) and (max-device-width:736px) and (orientation:landscape)";
+
+/// Media query for iPhone 6+ in portrait
+/// @group framework
+/// @access private
+/// @type String
+$device-iphone6plus-portrait	:"only screen and (min-device-width:414px) and (max-device-width:736px) and (orientation:portrait)";
+
+/// Media query for iPhone 6 & 6+
+/// @group framework
+/// @access private
+/// @type String
+$device-iphone6all				:"only screen and (max-device-width:640px), only screen and (max-device-width:667px), only screen and (max-width:480px)";
+
+/// Media query for iPhone 6 & 6+ in landscape
+/// @group framework
+/// @access private
+/// @type String
+$device-iphone6all-landscape	:"only screen and (max-device-width:640px), only screen and (max-device-width:667px), only screen and (max-width:480px) and (orientation:landscape)";
+
+/// Media query for iPhone 6 & 6+ in portrait
+/// @group framework
+/// @access private
+/// @type String
+$device-iphone6all-portrait     :"only screen and (max-device-width:640px), only screen and (max-device-width:667px), only screen and (max-width:480px) and (orientation:portrait)";
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-think					:#ffd517;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-twitter					:#55acee;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-facebook					:#3b5998;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-youtube					:#e52d27;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-pinterest				:#cc2127;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-instagram				:#3f729b;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-blogger					:#F79538;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-delicious				:#3399ff;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-deviantart				:#4e6252;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-dribbble					:#444444;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-flickr					:#ff0084;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-forrst					:#019F6F;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-github					:#333;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-google-drive				:#3777E3;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-google-plus				:#dd4b39;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-lastfm					:#AF0921;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-linkedin					:#0976b4;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-picasa					:#E14A3F;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-reddit					:#ff4500;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-skype					:#00aff0;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-stackoverflow			:#eb4924;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-stumbleupon				:#EB4823;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-tumblr					:#35465c;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-vimeo					:#162221;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-wordpress				:#21759b;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-yahoo					:#400191;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-tripadvisor				:#39A94A;
+
+$brand-email					:red;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-adn						:#4A484C;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-android					:#a4c639;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-apple					:#979797;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-behance					:#1769ff;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-bitbucket				:#205081;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-bitcoin					:#ee9209;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-codepen					:#000;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-css3						:#1680C0;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-digg						:#000;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-dropbox					:#007ee5;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-drupal					:#0077c0;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-empire					:#000;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-foursquare				:#0072b1;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-ge						:#000;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-git						:#333;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-gittip					:#663300;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-google					:#4285f4;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-hacker-news				:#ff6600;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-html5					:#e34f26;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-joomla					:#142849;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-jsfiddle					:#4679BD;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-linux					:#333333;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-maxcdn					:#FF6600;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-openid					:#F78C40;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-pagelines				:#000;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-pied-piper				:#2f9f46;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-qq						:#000;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-ra						:#000;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-rebel					:#000;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-renren					:#005EAC;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-share					:#01bf01;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-slack					:#0f7965;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-soundcloud				:#f80;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-spotify					:#7ab800;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-stack-exchange			:#000;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-stack-overflow			:#fe7a15;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-steam					:#0B0B0B;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-tencent-weibo			:#74AF2C;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-trello					:#256a92;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-vine						:#00b488;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-vk						:#45668e;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-wechat					:#93d034;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-weibo					:#E71D34;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-weixin					:#93d034;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-windows					:#00bcf2;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Color
+$brand-xing						:#026466;
+
+/// ...
+/// @group Framework
+/// @access private
+/// @type String
+$sans-font-family				:Arial, sans-serif;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type String
+$serif-font-family				:Georgia, "Times New Roman", Times, serif;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type String
+$mono-font-family				:Menlo, Monaco, Consolas, "Courier New", monospace;
+
+// Typescaale settings taken from http://type-scale.com/ http://www.gridlover.net/
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Number
+$scale-minor-second				:1.067;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Number
+$scale-major-second				:1.125;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Number
+$scale-minor-third				:1.200;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Number
+$scale-major-third				:1.250;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Number
+$scale-perfect-fourth			:1.333;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Number
+$scale-augmented-fourth			:1.414;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Number
+$scale-perfect-fifth			:1.500;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Number
+$scale-minor-sixth				:1.600;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Number
+$scale-golden-ratio				:1.618;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Number
+$scale-major-sixth				:1.667;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Number
+$scale-minor-seventh			:1.778;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Number
+$scale-major-seventh			:1.875;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Number
+$scale-octave					:2.000;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Number
+$scale-major-tenth				:2.500;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Number
+$scale-major-eleventh			:2.667;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Number
+$scale-major-twelfth			:3.000;
+
+/// ...
+/// @group framework
+/// @access private
+/// @type Number
+$scale-double-octave			:4.000;
+

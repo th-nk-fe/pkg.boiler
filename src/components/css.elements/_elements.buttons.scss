@@ -1,0 +1,235 @@
+/*
+Buttons
+
+Styleguide 0.12
+*/
+$btn-size-small:                        0.85em;
+$btn-size-large:                        1.2em;
+
+$btn-padding-vert:                      0.5em;
+$btn-padding-hor:                       1em;
+
+$btn-radius:                            1em;
+
+$btn-font-family:                       "";
+$btn-font-size:                         1em;
+$btn-line-height:                       1.8;
+
+$btn-font-color:                        #000000;
+$btn-bg-color:                          #8C4646;
+$btn-border:                            1px solid #F2AE72;
+$btn-icon-color:                        $btn-font-color;
+
+$btn-font-color-hover:                  #8C4646;
+$btn-bg-color-hover:                    #F2AE72;
+$btn-border-hover:                      1px solid #8C4646;
+$btn-icon-color-hover:                  $btn-font-color-hover;
+
+$btn-font-color-active:                 #8C4646;
+$btn-bg-color-active:                   #F2E394;
+$btn-border-active:                     1px solid #8C4646;
+$btn-icon-color-active:                 $btn-font-color-active;
+
+$btn-font-color-focus:                  $btn-font-color-hover;
+$btn-bg-color-focus:                    $btn-bg-color-hover;
+$btn-border-focus:                      $btn-border-hover;
+$btn-icon-color-focus:                  $btn-font-color-focus;
+     
+$btn-icon-padding-left:                 3em;
+$btn-icon-padding-right:                0.7em;   
+
+$btn-icon-left:                         0.5em;         
+
+$btn-icon-size:                         2em;
+
+
+
+
+/*
+Basic Button
+
+Markup:
+<button class="btn" tab-index="0">Click Button</button>
+<a class="btn" role="button" tab-index="0">Click Anchor</a>
+<span class="btn" role="button" tab-index="0">Click Span</span>
+
+Styleguide 0.12.1
+*/
+
+.btn {
+    display:                            inline-block;
+    border:                             $btn-border;
+    outline:                            none;
+    padding:                            $btn-padding-vert $btn-padding-hor;
+    margin-bottom:                      0;
+    position:                           relative;
+    box-sizing:                         border-box;             
+
+    color:                              $btn-font-color;
+    background-color:                   $btn-bg-color;
+
+    font-family:                        $btn-font-family;
+    font-size:                          $btn-font-size;
+    line-height:                        $btn-line-height;
+
+    -webkit-appearance:                 none;
+    -moz-appearance:                    none;
+    border-radius:                      $btn-radius;
+    white-space:                        nowrap;
+    cursor:                             pointer;    
+    -moz-user-select:                   none;
+    -ms-user-select:                    none;
+    -webkit-user-select:                none;
+    user-select:                        none;
+
+}
+
+.btn:hover {
+    background-color:                   $btn-bg-color-hover;
+    color:                              $btn-font-color-hover;
+    text-decoration:                    none;
+    border:                             $btn-border-hover;
+}
+
+.btn:focus {                   
+    background-color:                   $btn-bg-color-focus;
+    color:                              $btn-font-color-focus;
+    text-decoration:                    none;
+    border:                             $btn-border-focus;
+}
+
+.btn:active {
+    background-color:                   $btn-bg-color-active;
+    color:                              $btn-font-color-active;
+    text-decoration:                    none;
+    border:                             $btn-border-active;
+}
+
+
+
+/*
+Small Button
+
+Markup:
+<button class="btn btn--small" tab-index="0">Click Button</button>
+<a class="btn btn--small"role="button" tab-index="0">Click Anchor</a>
+<span class="btn btn--small" role="button" tab-index="0">Click Span</span>
+
+Styleguide 0.12.2
+*/
+
+.btn--small {
+    font-size:                          $btn-size-small;
+}
+
+/*
+Large Button
+
+Markup:
+<button class="btn btn--large" tab-index="0">Click Button</button>
+<a class="btn btn--large" role="button" tab-index="0">Click Anchor</a>
+<span class="btn btn--large"role="button" tab-index="0">Click Span</span>
+
+Styleguide 0.12.3
+*/
+
+.btn--large {
+    font-size:                          $btn-size-large;
+}
+
+/*
+Button with Icon
+
+Should you require an embedded SVG rather than a background image, a data-grunticon-embed attribute is required.  See example 3 below.  By default, the fill property for embedded icons will match $btn-font-color.  This can be changed appropriately.
+
+Markup:
+<button class="btn btn--icon" tab-index="0"><span class="icon icon-icon"></span>Click Button</button>
+<a class="btn btn--icon" role="button" tab-index="0"><span class="icon icon-icon"></span>Click Anchor</a>
+<span class="btn btn--icon" role="button" tab-index="0"><span class="icon icon-icon" data-grunticon-embed></span>Click Span</span>
+
+Styleguide 0.12.4
+*/
+
+.btn--icon {
+    padding:                            $btn-padding-vert $btn-icon-padding-right $btn-padding-vert $btn-icon-padding-left;
+}
+
+.btn--icon .icon {
+    height:                             $btn-icon-size;      
+    width:                              $btn-icon-size; 
+
+    top:                                50%;
+    left:                               $btn-icon-left;
+    position:                           absolute;
+
+    transform:                          translateY(-50%);
+    background-size:                    contain;
+    background-position:                center center;
+
+
+    fill:                               $btn-icon-color;
+}
+
+.btn--icon:hover .icon {
+     fill:                               $btn-icon-color-hover;
+}
+
+.btn--icon:focus .icon {
+     fill:                               $btn-icon-color-focus;
+}
+
+.btn--icon:active .icon {
+     fill:                               $btn-icon-color-active;
+}
+
+/*
+Button with Icon - right
+
+Should you require an embedded SVG rather than a background image, a data-grunticon-embed attribute is required.  See example 3 below.  By default, the fill property for embedded icons will match $btn-font-color.  This can be changed appropriately.
+
+Markup:
+<button class="btn btn--icon btn--right" tab-index="0"><span class="icon icon-icon"></span>Click Button</button>
+<a class="btn btn--icon btn--right" role="button" tab-index="0"><span class="icon icon-icon"></span>Click Anchor</a>
+<span class="btn btn--icon btn--right" role="button" tab-index="0"><span class="icon icon-icon" data-grunticon-embed></span>Click Span</span>
+<span class="btn btn--icon btn--right btn--small" role="button" tab-index="0"><span class="icon icon-icon" data-grunticon-embed></span>Click Span</span>
+<span class="btn btn--icon btn--right btn--large" role="button" tab-index="0"><span class="icon icon-icon" data-grunticon-embed></span>Click Span</span>
+
+Styleguide 0.12.5
+*/
+
+.btn--right {
+    padding:                            $btn-padding-vert $btn-icon-padding-left $btn-padding-vert $btn-icon-padding-right;
+}
+
+.btn--right .icon {
+    left:                               auto;
+    right:                              $btn-icon-left;
+    transform:                          translateY(-50%);
+}
+
+
+/*
+Icon
+
+Need to move this into another section
+
+Markup:
+<span class="icon icon-icon"></span>
+ 
+
+Styleguide 0.12.6
+*/
+
+
+.icon {
+
+    display:                            block;
+    width:2em;
+    height:2em;
+
+
+}
+
+.icon svg {
+    height:                             100%;
+}

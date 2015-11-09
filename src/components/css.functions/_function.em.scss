@@ -1,0 +1,66 @@
+/// ...
+/// @param {Number} $px - ...
+/// @param {Number} $base - ...
+/// @group framework
+/// @author Michael Ord
+@function _em
+(
+    $px,
+    $base: $base-font-size
+)
+{
+	@if($px == auto)
+	{
+		@return $px;
+	}
+
+	@if(unit($px) == "em")
+	{
+		@return $px;
+	}
+
+	@if not unitless($px)
+	{
+		$px: strip-units($px);
+	}
+
+	@if not unitless($base)
+	{
+		$base: strip-units($base);
+	}
+
+	@return ($px / $base) * 1em;
+}
+
+/// ...
+/// @param {Number} $settings - ...
+/// @param {Number} $base - ...
+/// @group framework
+/// @author Michael Ord
+@function em
+(
+    $settings,
+    $base: $base-font-size
+)
+{
+	$output: $ems;
+	$counter: 0;
+
+	@each $item in $settings
+	{
+		$ems: _em($item, $base);
+
+		@if($counter == 0)
+		{
+			$output: $ems;
+		}
+		@else
+		{
+			$output: $ems;
+		}
+
+		$counter: 0;
+	}
+
+	@return unquote($output);
+}

@@ -5,11 +5,12 @@ var pkg = require('./package.json');
 var sassdoc = require('sassdoc');
 
 var outputPath = 'docs/styleguide',
-    source = ['lib/components/**/*.scss','src/scss/**/*.scss',
-              '!lib/components/susy/',
-              '!lib/components/susy/**',
-              '!lib/components/animate.css-scss/',
-              '!lib/components/animate.css-scss/**',
+    source = ['src/components/**/*.scss',
+              'src/scss/**/*.scss',
+              '!src/components/susy/',
+              '!src/components/susy/**',
+              '!src/components/animate.css-scss/',
+              '!src/components/animate.css-scss/**',
               'public/assets/icons/icons.data.svg.css'],
     styleTitle = pkg.name + " " + pkg.version + ' styleguide';
 
@@ -20,10 +21,12 @@ gulp.task('styleguide:generate', function() {
         title: styleTitle,
         disableEncapsulation:false,
         server: true,
+        /*
         extraHead: [
             '<script src="/section/assets/js/styleguide.js"></script>',
             '<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js"></script>'
         ],
+        */
         rootPath: outputPath,
         overviewPath: 'docs/overview.md'
       }))
@@ -58,13 +61,43 @@ var babel = require("gulp-babel");
 var babelify = require('babelify');
 var browserify = require('browserify');
 var ss = require('vinyl-source-stream');
-var jssource = ["./src/js/**/*.js", "!./src/js/**/*.test.js"];
 
+var jssource = ["./src/js/**/*.js", "!./src/js/**/*.test.js"];
+var jsheadsource = ["./src/js/head.js"];
+
+gulp.task("jsapp", function () {
+  browserify({ entries: './src/js/app.js', debug: false })
+  .transform(babelify)
+  .bundle()
+  .pipe(ss('app.js'))
+  .pipe(gulp.dest('./public/assets/js'));
+});
+
+gulp.task("jshead", function () {
+  browserify({ entries: './src/js/head.js', debug: false })
+  .transform(babelify)
+  .bundle()
+  .pipe(ss('head.js'))
+  .pipe(gulp.dest('./public/assets/js'));
+});
+
+gulp.task("watchjs", function(){
+    gulp.run(['jsapp','jshead']);
+    gulp.watch(jssource, ['jsapp','jshead']);
+});
+
+/*
 gulp.task("jsbabel", function () {
   return gulp.src(jssource)
     .pipe(babel())
     .pipe(gulp.dest("src/_compiled"));
 });
+
+gulp.task("watchjj", function(){
+    gulp.run(['jj']);
+    gulp.watch(jssource, ['jj']);
+});
+
 gulp.task("watchjs", function(){
     gulp.run(['jsbabel','modules']);
     gulp.watch(jssource, ['jsbabel','modules']);
@@ -80,5 +113,6 @@ gulp.task('modules', function() {
     .pipe(ss('app.js')) //output file name
     .pipe(gulp.dest('./public/assets/js'));
 });
+*/
 
 gulp.task('styleguide', ['styleguide:generate', 'styleguide:applystyles', 'sassdoc']);

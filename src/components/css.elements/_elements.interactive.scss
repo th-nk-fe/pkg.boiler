@@ -1,0 +1,78 @@
+/*
+Interactive
+
+Styleguide 0.5
+*/
+
+/*
+details
+
+he details element represents a disclosure widget from which the user can obtain additional information or controls. However, the details element is not appropriate for footnotes.
+
+Markup:
+<details>
+	<summary>Name & Extension:</summary>
+	<p><input type=text name=fn value="Pillar Magazine.pdf"></p>
+	<p><label><input type=checkbox name=ext checked> Hide extension</label></p>
+</details>
+
+Styleguide 0.5.1
+*/
+details
+{
+
+}
+
+/*
+summary
+
+The summary element represents a summary, caption, or legend for the rest of the contents of the summary element's parent details element, if any.
+
+Markup:
+<details>
+	<summary>More information </summary>
+	<p>Here is the source data that is discussed in the article ...</p>
+</details>
+
+Styleguide 0.5.2
+*/
+summary
+{
+
+}
+
+/*
+command
+
+The command element represents a command that the user can invoke. A command can be part of a context menu or toolbar, using the menu element, or can be put anywhere else in the page, to define a keyboard shortcut.
+
+Markup:
+<menu type="toolbar"><command type="radio" radiogroup="alignment" checked="checked" label="Left" icon="left.png" onclick="setAlign('left')" />
+</menu>
+
+Styleguide 0.5.3
+*/
+command
+{
+
+}
+
+/*
+menu
+
+The menu element represents a list of commands.
+If a menu element's type attribute is in the context menu state, then the element represents the commands of a context menu, and the user can only interact with the commands if that context menu is activated. If a menu element's type attribute is in the toolbar state, then the element represents a list of active commands that the user can immediately interact with.
+If a menu element's type attribute is in the list state, then the element either represents an unordered list of items (each represented by an li element), each of which represents a command that the user can perform or activate, or, if the element has no li element children, flow content describing available commands.
+
+Markup:
+<menu type="toolbar">
+	<command type="command" disabled label="Save" icon="icons/save.png" onclick="save()">
+	<command type="command" disabled label="Publish" icon="icons/pub.png" onclick="publish()">
+</menu>
+
+Styleguide 0.5.4
+*/
+menu
+{
+
+}

@@ -1,0 +1,98 @@
+%icon
+{
+	speak 					:none;
+	line-height 			:1;
+	text-transform 			:none;
+	display 				:inline-block;
+	vertical-align 			:middle;
+	font-weight 			:normal;
+	font-style 				:normal;
+	font-variant 			:normal;
+	text-decoration 		:none;
+	text-rendering 			:optimizeLegibility;
+	-webkit-font-smoothing 	:antialiased;
+	-moz-osx-font-smoothing	:grayscale;
+}
+
+/// ...
+/// @group framework
+/// @author Michael Ord
+@mixin icon-only($content)
+{
+	$icon-font-name			:false !default;
+
+	@if($icon-font-name)
+	{
+		font-family 		:$icon-font-name;
+	}
+
+	@if($content)
+	{
+		content 			:$content;
+	}
+}
+
+/// ...
+/// @group framework
+/// @author Michael Ord
+@mixin icon-font($content:false)
+{
+	$icon-font-name			:false !default;
+
+	@if($icon-font-name)
+	{
+		font-family 			:$icon-font-name;
+
+		@if($content)
+		{
+			content 			:$content;
+		}
+
+		speak 					:none;
+		line-height 			:1;
+		text-transform 			:none;
+		display 				:inline-block;
+		vertical-align 			:middle;
+		font-weight 			:normal;
+		font-style 				:normal;
+		font-variant 			:normal;
+		text-decoration 		:none;
+		text-rendering 			:optimizeLegibility;
+		-webkit-font-smoothing 	:antialiased;
+		-moz-osx-font-smoothing	:grayscale;
+	}
+}
+
+/// ...
+/// @group framework
+/// @author Michael Ord
+@mixin icon-before($content)
+{
+	&:before
+	{
+		@include icon-font($content);
+
+		margin-right 			:8px;
+	}
+}
+
+/// ...
+/// @group framework
+/// @author Michael Ord
+@mixin icon-after($content)
+{
+	&:after
+	{
+		@include icon-font($content);
+
+		margin-left 			:8px;
+	}
+}
+
+/// ...
+/// @group framework
+/// @author Michael Ord
+@mixin icon($content)
+{
+	@include icon-font($content);
+}

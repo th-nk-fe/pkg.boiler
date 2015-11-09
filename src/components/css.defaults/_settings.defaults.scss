@@ -1,0 +1,247 @@
+/// ...
+/// @group framework
+/// @access public
+/// @type Color
+$clr-error						:#ce4844 !default;
+
+/// ...
+/// @group framework
+/// @access public
+/// @type Color
+$clr-warning					:#c29a17 !default;
+
+/// ...
+/// @group framework
+/// @access public
+/// @type Color
+$clr-success					:#00ff40 !default;
+
+/// ...
+/// @group framework
+/// @access public
+/// @type Color
+$clr-info						:#037cda !default;
+
+/// ...
+/// @group framework
+/// @access public
+/// @type Color
+$core-body-copy-color			:#000000 !default;
+
+/// ...
+/// @group framework
+/// @access public
+/// @type Color
+$contrasted-dark-default		:#000000 !default;
+
+/// ...
+/// @group framework
+/// @access public
+/// @type Color
+$contrasted-light-default		:#ffffff !default;
+
+/// ...
+/// @group framework
+/// @access public
+/// @type String
+$base-font-family				:$sans-font-family !default;
+
+/// ...
+/// @group framework
+/// @access public
+/// @type Number
+$base-line-height				:1.65 !default;
+
+/// ...
+/// @group framework
+/// @access public
+/// @type String
+$site-width 					:60em !default;
+
+/// ...
+/// @group framework
+/// @access public
+/// @type String
+$device-max-width-small					:600px !default;
+
+/// ...
+/// @group framework
+/// @access public
+/// @type String
+$device-min-width-med					:601px !default;
+
+/// ...
+/// @group framework
+/// @access public
+/// @type String
+$device-max-width-med					:992px !default;
+
+/// ...
+/// @group framework
+/// @access public
+/// @type String
+$device-min-width-large					:993px !default;
+
+/// ...
+/// @group framework
+/// @access public
+/// @type String
+$base-mono-font-family			:$mono-font-family !default;
+
+/// ...
+/// @group framework
+/// @access public
+/// @type String
+$body-font-size					:14px;
+
+/// ...
+/// @group framework
+/// @access public
+/// @type String
+$border-radius-base				:4px;
+
+/// ...
+/// @group framework
+/// @access public
+/// @type String
+$border-radius-large			:0px;
+
+/// ...
+/// @group framework
+/// @access public
+/// @type String
+$border-radius-small			:3px;
+
+/// ...
+/// @group framework
+/// @access public
+/// @type Color
+$border-color					:#ccc !default;
+
+/*
+Variables
+
+Global site variable setup
+
+Styleguide 3.1
+*/
+
+body {
+	// width:$device-max-width-small;
+	// width:$device-min-width-med;
+	// width:$device-max-width-med;
+	// width:$device-min-width-large;
+	// width:$site-width;
+	width:100%;
+}
+
+/*
+Fonts
+
+Site font variables
+
+body-copy-color - $core-body-copy-color
+
+Markup:
+<p class="var--{$modifiers}">font variables</p>
+
+Styleguide 3.1.1
+*/
+
+.var
+{
+	&--body-copy-color
+	{
+		color:$core-body-copy-color;
+		font-family: $base-font-family;
+		font-size: $body-font-size;
+		line-height: $base-line-height;
+	}
+}
+
+/*
+Colors
+
+Site color variables
+
+var--error - $clr-error
+var--warning - $clr-warning
+var--success - $clr-success
+var--info - $clr-info
+var--dark - $contrasted-dark-default
+var--light - $contrasted-light-default
+
+Markup:
+<div class="var {$modifiers}"></div>
+
+Styleguide 3.1.2
+*/
+
+.var
+{
+	margin: 0;
+	padding: 0;
+	width: 10px;
+	height: 10px;
+	float: left;
+	display: block;
+	clear: none;
+	border:1px solid #000;
+
+	&--error
+	{
+		background:$clr-error;
+	}
+	&--warning
+	{
+		background:$clr-warning;
+	}
+	&--success
+	{
+		background:$clr-success;
+	}
+	&--info
+	{
+		background:$clr-info;
+	}
+	&--dark
+	{
+		background:$contrasted-dark-default;
+	}
+	&--light
+	{
+		background:$contrasted-light-default;
+	}
+}
+
+/*
+Borders
+
+Site border variables
+
+border - $border-radius-base
+border--sml - $border-radius-small
+border--lrg - $border-radius-large
+
+Markup:
+<div class="var border {$modifiers}"></div>
+
+Styleguide 3.1.3
+*/
+
+.border
+{
+	border-color:$border-color;
+	border-radius:$border-radius-base;
+	width: 40px;
+	height: 20px;
+
+	&--sml
+	{
+		border-radius:$border-radius-small;
+	}
+	&--lrg
+	{
+		border-radius:$border-radius-large;
+	}
+}

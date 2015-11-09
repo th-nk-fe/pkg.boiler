@@ -1,0 +1,968 @@
+/*
+Forms
+
+Styleguide 0.3
+*/
+
+$form-font-color: $core-body-copy-color !default;
+
+$form-invalid-border-color: $clr-error !default;
+$form-valid-border-color: $clr-success !default;
+
+$form-border-radius: 0px;
+$form-border-width: 1px !default;
+$form-border-style: solid !default;
+$form-border-color: #cfd0d2 !default;
+
+$form-label-width: 100% !default;
+
+$form-input-width: 100% !default;
+$form-input-bg-color: #e8eaeb !default;
+$form-input-padding: 8px 10px !default;
+
+$form-hover-bg-color: $form-input-bg-color !default;
+$form-hover-border-color: $form-border-color !default;
+$form-hover-font-color: $form-font-color !default;
+
+$form-focus-bg-color: #ffffff !default;
+$form-focus-border-color: $form-border-color !default;
+$form-focus-font-color: $form-font-color !default;
+
+$form-allow-vendor-styling: true !default;
+
+$form-button-font-color: $form-font-color !default;
+$form-button-bg-color: $form-focus-bg-color !default;
+$form-button-hover-bg-color: $form-border-color !default;
+$form-button-hover-font-color: $form-font-color !default;
+
+$form-placeholder-colour: #7e7f80 !default;
+
+$form-error-text-color:#000000 !default;
+
+/*
+input,
+textarea,
+select,
+option,
+optgroup,
+button,
+legend,
+fieldset
+{
+	outline						:none;
+	color						:$form-font-color;
+	vertical-align				:top;
+}
+
+
+input,
+button,
+select,
+textarea
+{
+	font-family					:inherit;
+	font-size					:inherit;
+	line-height					:inherit;
+}
+
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="number"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input[list],
+input[type="file"],
+select,
+textarea
+{
+	width						:$form-input-width;
+	padding 					:$form-input-padding;
+	border-radius				:$form-border-radius;
+	background-color			:$form-input-bg-color;
+	border						:$form-border-width $form-border-style $form-border-color;
+	box-shadow					:inset 0 1px 1px rgba(0, 0, 0, .075);
+	transition					:border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	// Reset unusual Firefox-on-Android default style;
+	// see https://github.com/necolas/normalize.css/issues/214
+	background-image			:none;
+
+	&:active,
+	&:focus
+	{
+		cursor 					:text;
+		outline 				:none;
+	}
+}
+
+
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"]
+{
+	// Unstyle the caret on `<select>`s in IE10+.
+	&::-ms-expand
+	{
+		border					:0;
+		background-color		:transparent;
+	}
+
+	// Disabled and read-only inputs
+	//
+	// HTML5 says that controls under a fieldset > legend:first-child won't be
+	// disabled if the fieldset is disabled. Due to implementation difficulty, we
+	// don't honor that edge case; we style them as disabled anyway.
+	&[disabled],
+	&[readonly],
+	fieldset[disabled] &
+	{
+		// TODO - style this
+		//background-color		:@input-bg-disabled;
+		// iOS fix for unreadable disabled content;
+		opacity					:1;
+	}
+
+	&[disabled],
+	fieldset[disabled] &
+	{
+		cursor					:$cursor-disabled;
+	}
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="number"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input[list]
+{
+	-webkit-appearance			:none;
+}
+
+*/
+
+
+
+/*
+Fieldset & Legend
+
+The legend element represents a caption for the rest of the contents of the legend element's parent fieldset element, if any.
+
+Markup:
+<form action="#">
+	<fieldset>
+		<legend>Login Details</legend>
+		<div class="formfield formfield__text">
+			<label for="user-name">Username:</label>
+			<input id="user-name" name="user-name" type="email" data-gtm="CATEGORY-ACTION-LABEL" required aria-required="true" />
+		</div>
+		<div class="formfield formfield__text">
+			<label for="password">Password:</label>
+			<input id="password" name="password" type="password" data-gtm="CATEGORY-ACTION-LABEL" required aria-required="false" />
+		</div>
+	</fieldset>
+</form>
+
+Styleguide 0.3.1
+*/
+
+fieldset {
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+legend {
+    outline: none;
+    color: $form-font-color;
+    vertical-align: top;
+    padding: 0;
+    font-weight: inherit;
+    display: block;
+    width: 100%;
+    border: 0;
+    line-height: inherit;
+}
+
+/*
+Label
+
+The label represents a caption in a user interface. The caption can be associated with a specific form control, known as the label element's labeled control, either using for attribute, or by putting the form control inside the label element itself.
+
+Markup:
+<div class="formfield formfield__text">
+	<label for="username">Username:</label>
+	<input id="username" name="username" type="text" data-gtm="CATEGORY-ACTION-LABEL" required aria-required="true" />
+</div>
+
+Styleguide 0.3.2
+*/
+label {
+    // Force IE8 to wrap long content
+    max-width: 100%;
+    position: relative;
+    vertical-align: middle;
+    font-weight: 600;
+    display:block;
+    color: $form-font-color;
+    width:$form-label-width;
+
+    a {
+        font-weight: bold;
+    }
+
+    // Empty labels collapse automatically (not available in IE8)
+    &:empty {
+        display: none;
+    }
+}
+
+/*
+Input fields
+
+Text fields allow user input. 
+
+Markup:
+<div class="formfield formfield__text">
+  <label for="name">Name</label>
+  <input id="name" type="text" class="validate" data-gtm="CATEGORY-ACTION-LABEL" required aria-required="true" />
+</div>
+
+Styleguide 0.3.3
+*/
+
+input {
+    outline: none;
+    color: $form-font-color;
+    vertical-align: top;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    width: $form-input-width;
+    box-sizing:border-box;
+    padding: $form-input-padding;
+    border-radius: $form-border-radius;
+    background-color: $form-input-bg-color;
+    border: $form-border-width $form-border-style $form-border-color;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+
+    // Reset unusual Firefox-on-Android default style;
+    // see https://github.com/necolas/normalize.css/issues/214
+    background-image: none;
+
+    &:active,
+    &:focus {
+        cursor: text;
+        outline: none;
+    }
+
+    &[aria-invalid="true"] {
+        border-color: $form-invalid-border-color;
+    }
+
+    &[aria-invalid="false"] {
+        border-color: $form-valid-border-color;
+    }
+	
+	@include placeholder {
+        color: $form-placeholder-colour;
+    }
+}
+
+/*
+Textarea
+
+The textarea element represents a multiline plain text edit control for the element's raw value. The contents of the control represent the control's default value.
+
+Markup:
+<div class="formfield formfield__textarea">
+	<label for="textarea">Address</label>
+	<textarea id="textarea" cols="10" rows="10" data-gtm="CATEGORY-ACTION-LABEL" aria-required="true"></textarea>
+</div>
+
+Styleguide 0.3.4
+*/
+
+$cursor-disabled				:not-allowed;
+
+textarea {
+    outline: none;
+    width: $form-input-width;
+    box-sizing:border-box;
+    color: $form-font-color;
+    vertical-align: top;
+	font-family					:inherit;
+	font-size					:inherit;
+	line-height					:inherit;
+    -webkit-appearance: none;
+    resize: vertical;
+    overflow: auto;
+
+    // Reset height for `textarea`s
+    height: auto;
+	
+	// Unstyle the caret on `<select>`s in IE10+.
+	&::-ms-expand
+	{
+		border					:0;
+		background-color		:transparent;
+	}
+
+	// Disabled and read-only inputs
+	//
+	// HTML5 says that controls under a fieldset > legend:first-child won't be
+	// disabled if the fieldset is disabled. Due to implementation difficulty, we
+	// don't honor that edge case; we style them as disabled anyway.
+	&[disabled],
+	&[readonly],
+	fieldset[disabled] &
+	{
+		// TODO - style this
+		//background-color		:@input-bg-disabled;
+		// iOS fix for unreadable disabled content;
+		opacity					:1;
+	}
+
+	&[disabled],
+	fieldset[disabled] &
+	{
+		cursor					:$cursor-disabled;
+	}
+	
+	@include placeholder {
+        color: $form-placeholder-colour;
+    }
+}
+
+/*
+Range Input
+
+Used to style the range input element
+
+Markup:
+<div class="formfield formfield__range">
+	<label for="range">Range</label>
+	<input id="range" type="range" data-gtm="CATEGORY-ACTION-LABEL" required aria-required="true" />
+</div>
+
+Styleguide 0.3.3.4
+*/
+input[type="range"] {
+    width: $form-input-width;
+    display: block;
+    -webkit-appearance: none;
+
+    $width: 100%;
+    $track-height: 12px;
+    $track-border-radius: 0px;
+    $track-background-color: #ac51b5;
+
+    &::-webkit-slider-runnable-track {
+        width: $width;
+        height: $track-height;
+        cursor: pointer;
+        animate: 0.2s;
+        box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+        background: $track-background-color;
+        border-radius: $track-border-radius;
+        border: 0px solid #000101;
+    }
+
+    &:in-range::-webkit-slider-runnable-track {}
+
+    &:out-of-range::-webkit-slider-runnable-track {}
+
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+        border: 0px solid #000000;
+        height: 20px;
+        width: 39px;
+        border-radius: 7px;
+        background: #65001c;
+        cursor: pointer;
+        margin-top: -3.6px;
+    }
+
+    &:focus::-webkit-slider-runnable-track {
+        background: $track-background-color;
+    }
+
+    &::-moz-range-track {
+        width: $width;
+        height: $track-height;
+        cursor: pointer;
+        animate: 0.2s;
+        box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+        background: $track-background-color;
+        border-radius: $track-border-radius;
+        border: 0px solid #000101;
+    }
+
+    &::-moz-range-thumb {
+        box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+        border: 0px solid #000000;
+        height: 20px;
+        width: 39px;
+        border-radius: 7px;
+        background: #65001c;
+        cursor: pointer;
+    }
+
+    &::-ms-track {
+        width: $width;
+        height: $track-height;
+        cursor: pointer;
+        animate: 0.2s;
+        background: transparent;
+        border-color: transparent;
+        border-width: 39px 0;
+        color: transparent;
+    }
+
+    &::-ms-fill-lower {
+        background: $track-background-color;
+        border: 0px solid #000101;
+        border-radius: 50px;
+        box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    }
+
+    &::-ms-fill-upper {
+        background: $track-background-color;
+        border: 0px solid #000101;
+        border-radius: 50px;
+        box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    }
+
+    &::-ms-thumb {
+        box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+        border: 0px solid #000000;
+        height: 20px;
+        width: 39px;
+        border-radius: 7px;
+        background: #65001c;
+        cursor: pointer;
+    }
+
+    &:focus::-ms-fill-lower {
+        background: $track-background-color;
+    }
+
+    &:focus::-ms-fill-upper {
+        background: $track-background-color;
+    }
+}
+
+
+
+
+
+/*
+Date Input
+
+Used to style the date input element
+
+Markup:
+<div class="formfield formfield__date">
+	<label for="datepicker">Date</label>
+	<input id="datepicker" type="date" data-gtm="CATEGORY-ACTION-LABEL" required aria-required="true" />
+</div>
+
+Styleguide 0.3.3.5
+*/
+
+
+input[type=date]
+{
+	&[disabled] {
+        cursor: $cursor-disabled;
+    }
+
+    &:hover {
+        background-color: $form-hover-bg-color;
+        border-color: $form-hover-border-color;
+    }
+
+    &:focus {
+        background-color: $form-focus-bg-color;
+        border-color: $form-focus-border-color;
+    }
+}
+
+
+
+
+
+/*
+File Input
+
+If you want to style an input button with a path input.
+
+Markup:
+<div class="formfield formfield__file">
+	<label for="file">File:</label>
+	<input id="file" type="file" data-gtm="CATEGORY-ACTION-LABEL" required aria-required="true" />
+</div>
+
+
+Styleguide 0.3.3.1
+*/
+input[type="file"] {
+    display: block;
+}
+
+
+
+
+/*
+Search Input
+
+This input is used for search fields
+
+Markup:
+<div class="formfield formfield__search">
+	<label for="search">Search box:</label>
+	<input id="search" type="search" data-gtm="CATEGORY-ACTION-LABEL" required aria-required="true" />
+</div>
+
+Styleguide 0.3.3.2
+*/
+
+input[type="search"] {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+	
+	&[disabled] {
+        cursor: $cursor-disabled;
+    }
+
+    &:hover {
+        background-color: $form-hover-bg-color;
+        border-color: $form-hover-border-color;
+    }
+
+    &:focus {
+        background-color: $form-focus-bg-color;
+        border-color: $form-focus-border-color;
+    }
+
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/*
+Select
+
+The select element represents a control for selecting amongst a set of options.
+
+Markup:
+<div class="formfield formfield__select">
+	<label for="title">Title</label>
+	<select id="title" name="title" data-gtm="CATEGORY-ACTION-LABEL" aria-required="true" >
+		<option value="" selected>Please choose</option>
+		<option value="Mr">Mr</option>
+		<option value="Miss">Miss</option>
+		<option value="Mrs">Mrs</option>
+		<option value="Ms">Ms</option>
+		<option value="Dr">Dr</option>
+		<option value="Other">Other</option>
+	</select>
+</div>
+
+Styleguide 0.3.5
+*/
+select {
+    outline: none;
+    color: $form-font-color;
+    vertical-align: top;
+    width: $form-input-width;
+    box-sizing:border-box;
+
+    @if $form-allow-vendor-styling == false {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+    }
+
+    option {
+        outline: none;
+        color: $form-font-color;
+        vertical-align: top;
+        padding: $form-input-padding;
+    }
+
+    &[multiple],
+    &[size] {
+        // Make multiple select elements height not fixed
+        height: auto;
+        padding: 0;
+
+        option {
+            margin: 0;
+        }
+    }
+}
+/*
+label, input, textarea, button, select, option {
+    cursor: pointer;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="image"] {}
+
+input[type="image"] {
+    text-align: center;
+    padding: $form-input-padding;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="number"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input[list],
+input[type="file"],
+select,
+textarea,
+textarea,
+select,
+option,
+button {
+    &[disabled] {
+        cursor: $cursor-disabled;
+    }
+
+    &:hover {
+        background-color: $form-hover-bg-color;
+        border-color: $form-hover-border-color;
+    }
+
+    &:focus {
+        background-color: $form-focus-bg-color;
+        border-color: $form-focus-border-color;
+    }
+}
+
+
+
+*/
+
+/*
+//progress
+
+//Represents the completion progress of a task. Progress may be either indeterminate â€" meaning it is unclear how much work remains before the task is complete (e.g., the task is waiting for a response from a remote host) â€" or a numeric value between 0 and a given maximum, explicitly specifying //the fraction of work that has so far been completed.
+
+//Markup:
+//<p>Progress: <progress> <span>0</span>% </progress> </p>
+
+//Styleguide 3.10
+*/
+/*progress {
+    appearance: none;
+    height: 20px;
+    display: block;
+    width: 100%;
+
+    $background: #eee;
+    $progress: #CC0000;
+
+    // firefox
+    border: none;
+    background: $background;
+    border-radius: $form-border-radius;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2) inset;
+
+    &::-webkit-progress-bar {
+        background: $background;
+        border-radius: $form-border-radius;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2) inset;
+    }
+
+    &::-webkit-progress-value {
+        background-color: $progress;
+        border-radius: $form-border-radius;
+    }
+
+    &::-moz-progress-bar {
+        background-color: $progress;
+        border-radius: $form-border-radius;
+    }
+}
+*/
+
+/*
+Color Input
+
+Used to style the color input element
+
+Markup:
+<div class="formfield formfield__color">
+	<label for="color">Color</label>
+	<input id="color" type="color" data-gtm="CATEGORY-ACTION-LABEL" required aria-required="true" />
+</div>
+
+Styleguide 0.3.3.3
+*/
+input[type="color"] {
+    padding: 0;
+    width: auto;
+    min-width: 1.5rem;
+}
+
+/*
+output
+
+Represents the result of a calculation.
+The optional for attribute allows an explicit relationship to be made between the result of a calculation and the elements representing the values that influenced the calculation. If specified, the for attribute must contain a string consisting of an unordered set of unique, space-separated tokens, each of which must be the ID of an element in the same document.
+
+Markup:
+<label for="flying">Flying Skill Level</label>
+<input name="flying-level" id="flying" type="range" min="0" max="250" data-gtm="CATEGORY-ACTION-LABEL" required aria-required="true" />
+<output for="flying" onforminput="value = flying.valueAsNumber">0</output>
+
+
+Styleguide 0.0.x
+*/
+
+
+/*
+Radio Buttons
+
+Radio Buttons are used when the user must make only one selection out of a group of items.
+
+Markup:
+<div class="formfield">
+	<label for="test1">Radio group label</label>
+	<div class="formfield formfield__radio">
+	 	<input name="group1" type="radio" id="test1" data-gtm="CATEGORY-ACTION-LABEL" />
+	 	<label for="test1">Red</label>
+	</div>
+	<div class="formfield formfield__radio">
+	  	<input name="group1" type="radio" id="test2" data-gtm="CATEGORY-ACTION-LABEL" />
+	  	<label for="test2">Yellow</label>
+	</div>
+	<div class="formfield formfield__radio">
+	  	<input name="group1" type="radio" id="test3" data-gtm="CATEGORY-ACTION-LABEL" />
+	  	<label for="test3">Green</label>
+	</div>
+	<div class="formfield formfield__radio">
+	    <input name="group1" type="radio" id="test4" data-gtm="CATEGORY-ACTION-LABEL" disabled="disabled" />
+	    <label for="test4">Brown</label>
+	</div>
+</div>
+
+Styleguide 0.3.6
+*/
+
+input[type="radio"] {
+    margin: 0 5px 0 0;
+    width:auto;
+
+    // IE8-9
+    line-height: normal;
+
+    // make sure that these always display inline - as they should be next to an input
+    display: inline-block;
+    vertical-align: middle;
+
+    + label {
+        width: auto;
+        display: inline-block;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &[disabled] {
+        + label {
+            cursor: $cursor-disabled;
+        }
+    }
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+
+
+/*
+Checkboxes
+
+Radio Buttons are used when the user must make only one selection out of a group of items.
+
+Markup:
+<div class="formfield">
+	<label for="test5">Checkbox group label</label>
+	<div class="formfield formfield__checkbox">
+		<input type="checkbox" id="test5" data-gtm="CATEGORY-ACTION-LABEL" />
+		<label for="test5">Red</label>
+	</div>
+	<div class="formfield formfield__checkbox">
+		<input type="checkbox" id="test6" data-gtm="CATEGORY-ACTION-LABEL" />
+		<label for="test6">Yellow</label>
+	</div>
+	<div class="formfield formfield__checkbox">
+		<input type="checkbox" id="test7" data-gtm="CATEGORY-ACTION-LABEL" />
+		<label for="test7">Green</label>
+	</div>
+	<div class="formfield formfield__checkbox">
+		<input type="checkbox" id="test8" data-gtm="CATEGORY-ACTION-LABEL" />
+		<label for="test8">Brown</label>
+	</div>
+</div>
+
+
+Styleguide 0.3.7
+*/
+
+input[type="checkbox"]
+{
+    margin: 0 5px 0 0;
+    width:auto;
+
+    // IE8-9
+    line-height: normal;
+
+    // make sure that these always display inline - as they should be next to an input
+    display: inline-block;
+    vertical-align: middle;
+
+    + label {
+        width: auto;
+        display: inline-block;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &[disabled] {
+        + label {
+            cursor: $cursor-disabled;
+        }
+    }
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+/*
+Buttons
+
+The legend element represents a caption for the rest of the contents of the legend element's parent fieldset element, if any.
+
+Markup:
+<div class="formfield formfield__btns">
+	<input name="submit" type="submit" value="submit"/>
+</div>
+
+Styleguide 0.3.8
+*/
+
+input[type=submit]{
+    width:auto;
+}
+
+
+
+
+
+
+
+/*
+Error Messages
+
+Shows the user messages to alert them to the status of the input field.
+
+Markup:
+<div class="formfield formfield__text formfield__error formfield__error--warning">
+  <label for="name">Name</label>
+  <input id="name" type="text" class="validate" data-gtm="CATEGORY-ACTION-LABEL" required aria-required="true" />
+</div>
+<div class="formfield formfield__text formfield__error formfield__error--success">
+  <label for="name">Name</label>
+  <input id="name" type="text" class="validate" data-gtm="CATEGORY-ACTION-LABEL" required aria-required="true" />
+</div>
+<div class="formfield formfield__text formfield__error formfield__error--error">
+  <label for="name">Name</label>
+  <input id="name" type="text" class="validate" data-gtm="CATEGORY-ACTION-LABEL" required aria-required="true" />
+</div>
+<div class="formfield formfield__text formfield__error formfield__error--info">
+  <label for="name">Name</label>
+  <input id="name" type="text" class="validate" data-gtm="CATEGORY-ACTION-LABEL" required aria-required="true" />
+</div>
+
+Styleguide 0.3.9
+*/
+
+.formfield__error{
+    margin: 10px 0px;
+    padding:12px;
+    color:$form-error-text-color;
+    
+    &.formfield__error--warning{
+        background-color: $clr-warning;
+    }
+    
+    &.formfield__error--success{
+        background-color: $clr-success;
+    }
+    
+    &.formfield__error--error{
+        background-color: $clr-error;
+    }
+    
+    &.formfield__error--info{
+        background-color: $clr-info
+    }
+}

@@ -1,0 +1,13 @@
+/// ...
+/// @group framework
+/// @author Michael Ord
+@mixin alt-color()
+{
+	@if($alt-colour-classnamne)
+	{
+		.#{$alt-colour-classnamne} &
+		{
+			@content;
+		}
+	}
+}

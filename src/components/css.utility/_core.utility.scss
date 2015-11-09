@@ -1,0 +1,210 @@
+/*
+Utility
+
+Styleguide 0.11
+*/
+
+/*
+List
+
+list--inline	 - [Modifier description]
+
+Markup:
+<ul class="list {$modifiers}">
+	<li>list item</li>
+	<li>list item</li>
+	<li>list item</li>
+</ul>
+
+Styleguide 0.11.1
+*/
+.list
+{
+	margin 					:0;
+	padding 				:0;
+	list-style				:none;
+
+	&--inline
+	{
+		li
+		{
+			display			:inline-block;
+			margin			:0 5px 0 0;
+		}
+	}
+}
+
+/*
+Align
+
+--left	 - text align left
+--right - text align right
+--center - text align center
+
+Markup:
+<p class="align{$modifiers}">text align</p>
+
+Styleguide 0.11.2
+*/
+
+.align--left {
+	text-align: left; 
+}
+.align--right {
+	text-align: right; 
+} 
+.align--center {
+	text-align: center; 
+}
+.left {
+	float: left !important; 
+}
+.right {
+	float: right !important; 
+}
+
+/*
+Vertical align
+
+vertical - text align vertical (requires .valign wrapper)
+
+Markup:
+<div class="valign">
+	<p class="align--vertical">text align</p>
+</div>
+
+Styleguide 0.11.3
+*/
+.valign {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center; 
+}
+.valign .align--vertical {
+	display: block; 
+}
+
+/*
+Truncate
+
+Markup:
+<p class="truncate" style="width:50px;">text text text text text text text text text text text text text text</p>
+
+Styleguide 0.11.4
+*/
+.truncate {
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis; 
+}
+
+/*
+Hide
+
+hide - hide all
+hide--small - hide for mobile only
+hide--med - hide for med only
+hide--small-med - hide for med amd below
+hide--large - hide for large only
+hide--med-large - hide for med and above
+
+Markup:
+<p class="{$modifiers}">hide text</p>
+
+Styleguide 0.11.5
+*/
+.hide {
+	display: none !important; 
+}
+
+@media only screen and (max-width : $device-max-width-small) {
+	.hide--small {
+		display: none !important; 
+	} 
+}
+
+@media only screen and (max-width : $device-max-width-med) {
+	.hide--small-med {
+		display: none !important; 
+	} 
+}
+
+@media only screen and (min-width : $device-min-width-med) {
+	.hide--med-large {
+		display: none !important; 
+	} 
+}
+
+@media only screen and (min-width: $device-max-width-small) and (max-width: $device-max-width-med) {
+	.hide--med {
+		display: none !important; 
+	} 
+}
+
+@media only screen and (min-width : $device-min-width-large) {
+	.hide--large {
+		display: none !important; 
+	} 
+}
+
+/*
+Show
+
+show--small - show on small
+show--med - show on medium
+show--large - show on large
+show--small-med - show on small and medium
+show--med-large - show on medium and above
+
+Markup:
+<p class="{$modifiers}">show text</p>
+
+Styleguide 0.11.6
+*/
+
+@media only screen and (min-width : $device-min-width-large) {
+	.show--large {
+		display: initial !important; 
+	} 
+}
+
+@media only screen and (min-width: $device-max-width-small) and (max-width: $device-max-width-med) {
+	.show--med {
+		display: initial !important; 
+	} 
+}
+
+@media only screen and (max-width : $device-max-width-small) {
+	.show--small {
+		display: initial !important; 
+	} 
+}
+
+@media only screen and (min-width : $device-min-width-med) {
+	.show--med-large {
+		display: initial !important; 
+	} 
+}
+
+@media only screen and (max-width : $device-max-width-med) {
+	.show--small-med {
+		display: initial !important; 
+	} 
+}
+
+// iOS "clickable elements" fix for role="button"
+//
+// Fixes "clickability" issue (and more generally, the firing of events such as focus as well)
+// for traditionally non-focusable elements with role="button"
+// see https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+[role="button"]
+{
+	cursor					:pointer;
+}

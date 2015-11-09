@@ -1,0 +1,8 @@
+/// ...
+/// @group framework
+/// @author Michael Ord
+@mixin size($width, $height:$width)
+{
+	width 			:$width;
+	height 			:$height;
+}

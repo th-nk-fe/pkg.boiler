@@ -1,0 +1,103 @@
+/*
+Tables
+
+Styleguide 0.8
+*/
+
+
+
+$table-bg-color							:#fff !default;
+$table-bg-hover-color					:#ccc !default;
+$table-bg-accent-color					:#eee !default;
+
+$table-border-color						:#eee !default;
+
+$table-cell-padding						:5px 10px !default;
+
+/*
+table
+
+The table element represents data with more than one dimension, in the form of a table. Tables must not be used as layout aids.
+
+Markup:
+<table>
+	<thead>
+		<tr>
+			<th scope="col">dog</th>
+			<th scope="col">cat</th>
+			<th scope="col">horse</th>
+			<th scope="col">iguana</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>5</td>
+			<td>2</td>
+			<td>10</td>
+			<td>500</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>2</td>
+			<td>10</td>
+			<td>500</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>2</td>
+			<td>10</td>
+			<td>500</td>
+		</tr>
+	</tbody>
+</table>
+
+Styleguide 0.8.1
+*/
+
+table
+{
+	width 								:100%;
+	max-width							:100%;
+	border-spacing						:0;
+	border-collapse						:collapse;
+	text-align 							:left;
+	background-color					:$table-bg-color;
+}
+
+caption
+{
+	text-align							:left;
+}
+
+thead
+{
+	border-bottom:1px solid $table-border-color;
+}
+
+th, td
+{
+	padding 							:$table-cell-padding;
+}
+
+
+// Cell alignments
+[colspan]
+{
+	text-align 							:center;
+}
+
+[colspan="1"]
+{
+	text-align 							:left;
+}
+
+[rowspan]
+{
+	vertical-align						:middle;
+}
+
+[rowspan="1"]
+{
+	vertical-align 						:top;
+}
+

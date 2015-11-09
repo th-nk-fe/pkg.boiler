@@ -43,7 +43,6 @@
     "pkg.tabs": "th-nk-modules/pkg.tabs",
     "pkg.carousel": "th-nk-modules/pkg.carousel",
     "pkg.modal": "th-nk-modules/pkg.modal",
-
     "animate.css-scss": "geoffgraham/animate.scss"
   },
   "overrides": {

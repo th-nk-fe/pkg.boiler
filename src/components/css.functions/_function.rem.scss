@@ -1,0 +1,62 @@
+/// Return...
+/// @param {Number} $px - ...
+/// @group framework
+/// @author Michael Ord
+@function _rem
+(
+    $px
+)
+{
+	@if($px == auto)
+	{
+		@return $px;
+	}
+
+	@if(unit($px) == "rem")
+	{
+		@return $px;
+	}
+
+	@if not unitless($px)
+	{
+		$px 		:strip-units($px);
+	}
+
+	@if not unitless($base-font-size)
+	{
+		$base 		:strip-units($base-font-size);
+	}
+
+	@return ($px / $base) * 1rem;
+}
+
+/// Return...
+/// @param {Number} $size - ...
+/// @group framework
+/// @author Michael Ord
+@function rem
+(
+    $size
+)
+{
+	$output 		:$rem;
+	$counter 		:0;
+
+	@each $item in $settings
+	{
+		$rem 		:_rem($item, $base);
+
+		@if($counter == 0)
+		{
+			$output :$rem;
+		}
+		@else
+		{
+			$output :$rem;
+		}
+
+		$counter 	:0;
+	}
+
+	@return unquote($output);
+}

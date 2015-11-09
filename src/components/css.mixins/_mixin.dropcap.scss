@@ -1,0 +1,29 @@
+/// ...
+/// @group framework
+/// @author Michael Ord
+@mixin core-dropcap
+(
+	$float-position		:$core-dropcap-float-position,
+	$font-size			:$core-dropcap-font-size,
+	$font-family		:$core-dropcap-font-family,
+	$txt-indent			:$core-dropcap-txt-indent,
+	$margin				:$core-dropcap-margin,
+	$padding			:$core-dropcap-padding,
+	$color				:$core-dropcap-color,
+	$line-height		:$core-dropcap-line-height,
+	$bg 				:$core-dropcap-bg
+)
+{
+	&:first-letter
+	{
+		float 			:$float-position;
+		margin 			:$margin;
+		padding 		:$padding;
+		font-size 		:$font-size;
+		font-family 	:$font-family;
+		line-height 	:$line-height;
+		text-indent 	:$txt-indent;
+		background	 	:$bg;
+		color			:$color;
+	}
+}

@@ -1,0 +1,310 @@
+/*
+Grouping
+
+Styleguide 0.4
+*/
+
+/*
+p
+
+The p element represents a paragraph.
+
+Markup:
+<p>This is an example of the p tag.</p>
+
+Styleguide 0.4.1
+*/
+p
+{
+
+}
+
+/*
+hr
+
+Represents a paragraph-level thematic break. The "paragraph-level" bit means between blocks of text, so it can't be used to separate sections of a site. Instead, hr now separates different topics within a section of prose, or between scenes in a novel.
+
+Markup:
+<p>Lorem Ipsum dolor set amet</p>
+<hr />
+<p>Lorem Ipsum dolor set amet</p>
+
+Styleguide 0.4.2
+*/
+hr
+{
+	border 							:0;
+	color 							:#000;
+	border-bottom-width 			:1px;
+	border-bottom-style 			:solid;
+	column-span						:all;
+}
+
+/*
+pre
+
+The pre element represents a block of preformatted text, in which structure is represented by typographic conventions rather than by elements.
+
+Markup:
+<p>The code for a basic JavaScript message is:</p><pre>&lt;script&gt;alert("hello world");&lt;/script&gt;</pre>
+
+Styleguide 0.4.3
+*/
+
+$pre-bg							:#f5f5f5;
+$pre-color						:$gray-dark;
+$pre-border-color				:#ccc;
+$pre-scrollable-max-height		:340px;
+
+pre
+{
+	white-space 				:pre;
+	overflow 					:auto;
+	display						:block;
+	//padding: ((@line-height-computed - 1) / 2);
+	//margin: 0 0 (@line-height-computed / 2);
+	//font-size: (@font-size-base - 1); // 14px to 13px
+	//line-height: @line-height-base;
+	padding						:10px; // TODO - make dynamic
+	word-break					:break-all;
+	word-wrap					:break-word;
+	color						:$pre-color;
+	background-color			:$pre-bg;
+	border						:1px solid $pre-border-color;
+	border-radius				:$border-radius-base;
+
+	code
+	{
+		white-space 			:pre-wrap;
+		padding					:0;
+		font-size				:inherit;
+		color					:inherit;
+		background-color		:transparent;
+		border-radius			:0;
+		border					:0;
+	}
+
+	mark
+	{
+		background 				:none;
+		color 					:inherit;
+		border-bottom 			:1px solid;
+	}
+}
+
+// TODO - comment
+.pre--scrollable
+{
+	max-height					:$pre-scrollable-max-height;
+	overflow-y					:scroll;
+}
+
+
+/*
+blockquote
+
+The <code>blockquote</code> element represents a section that is quoted from another source.
+Content inside a <code>blockquote</code> must be quoted from another source, whose address, if it has one, may be cited in the cite attribute.
+
+Markup:
+<blockquote>What we have here is a quotation from another source</blockquote>
+
+Styleguide 0.4.4
+*/
+blockquote
+{
+	margin 						:0;
+}
+
+// Lists
+// ================================================================================================
+ul, ol
+{
+	break-inside				:avoid;
+}
+
+/*
+ol
+
+The ol element represents a list of items, where the items have been intentionally ordered, such that changing the order would change the meaning of the list.
+
+Markup:
+<ol>
+	<li>Ordered List Item One</li>
+	<li>Ordered List Item One</li>
+</ol>
+
+Styleguide 0.4.5
+*/
+ol
+{
+
+}
+
+/*
+ul
+
+The ul element represents a list of items, where the order of the items is not important — that is, where changing the order would not materially change the meaning of the list.
+
+Markup:
+<ul>
+	<li>Unordered List Item One</li>
+	<li>Unordered List Item One</li>
+</ul>
+
+Styleguide 0.4.6
+*/
+ul
+{
+
+}
+
+/*
+li
+
+The li element represents a list item. If its parent element is an ol, ul, or menu element, then the element is an item of the parent element's list, as defined for those elements. Otherwise, the list item has no defined list-related relationship to any other li element.
+
+Markup:
+<ol>
+	<li>Ordered List Item One</li>
+	<li>Ordered List Item One</li>
+</ol>
+
+Styleguide 0.4.7
+*/
+li
+{
+	// Remove vertical spacing from nested lists.
+	> ul, > ol
+	{
+		margin-bottom 			:0;
+		margin-top 				:0;
+	}
+}
+
+/*
+dl
+
+Represents a description list consisting of zero or more name-value groups. Each group must consist of one or more names (dt elements) each followed by one or more values (dd elements).
+Name-value groups may be terms and definitions, metadata topics and values, or any other groups of name-value data. The values within a group are alternatives; multiple paragraphs forming part of the same value must all be given within the same dd element.
+
+Markup:
+<dl>
+	<dt>address</dt>
+	<dd>The address element represents the contact information for the section it applies to. If it applies to the body element, then it instead applies to the document as a whole.</dd>
+	<dt>article</dt>
+	<dd>The article element represents a section of a page that consists of a composition that forms an independent part of a document, page, or site. This could be a forum post, a magazine or newspaper article, a Web log entry, a user-submitted comment, or any other independent item of content.</dd>
+</dl>
+
+Styleguide 0.4.8
+*/
+dl
+{
+	padding 					:0;
+}
+
+/*
+dt
+
+The dt element represents the term, or name, part of a term-description group in a description list (dl element).
+
+Markup:
+<dl>
+	<dt>address</dt>
+	<dd>The address element represents the contact information for the section it applies to. If it applies to the body element, then it instead applies to the document as a whole.</dd>
+	<dt>article</dt>
+	<dd>The article element represents a section of a page that consists of a composition that forms an independent part of a document, page, or site. This could be a forum post, a magazine or newspaper article, a Web log entry, a user-submitted comment, or any other independent item of content.</dd>
+</dl>
+
+Styleguide 0.4.9
+*/
+dt
+{
+	font-weight 				:600;
+	display 					:block;
+}
+
+/*
+dd
+
+The dd element represents the description, definition, or value, part of a term-description group in a description list (dl element).
+
+Markup:
+<dl>
+	<dt>address</dt>
+	<dd>The address element represents the contact information for the section it applies to. If it applies to the body element, then it instead applies to the document as a whole.</dd>
+	<dt>article</dt>
+	<dd>The article element represents a section of a page that consists of a composition that forms an independent part of a document, page, or site. This could be a forum post, a magazine or newspaper article, a Web log entry, a user-submitted comment, or any other independent item of content.</dd>
+</dl>
+
+Styleguide 0.4.10
+*/
+dd
+{
+	display 					:block;
+	// Undo browser default margins
+	margin 						:0;
+}
+
+/*
+figure
+
+The figure element represents some flow content, optionally with a caption, that is self-contained and is typically referenced as a single unit from the main flow of the document.
+The figure element can be used to annotate illustrations, diagrams, photos, code listings, etc., that are referenced in the main content of the document, but that could, without affecting the flow of the document, be moved away from that primary content — e.g., to the side of the page, to dedicated pages, or to an appendix.
+
+Markup:
+<figure>
+	&lt;img ... &gt; (or video, table etc)
+	<figcaption>A rabid unicorn goring a fairy.</figcaption>
+</figure>
+
+Styleguide 0.4.11
+*/
+figure
+{
+	margin 						:0;
+
+	// make sure that the figure obays max-width as much as images do..
+	max-width					:100%;
+
+	// Images in `figure` elements.
+	img
+	{
+		display 				:block;
+	}
+}
+
+/*
+figcaption
+
+The figcaption element represents a caption or legend for the rest of the contents of the figcaption element's parent figure element, if any.
+
+Markup:
+<figure>
+	&lt;img ... &gt; (or video, table etc)
+	<figcaption>A rabid unicorn goring a fairy.</figcaption>
+</figure>
+
+Styleguide 0.4.12
+*/
+figcaption
+{
+
+}
+
+/*
+div
+
+The div element has no special meaning at all. It represents its children. It can be used with the class, lang, and title attributes to mark up semantics common to a group of consecutive elements.
+
+Markup:
+<div>
+	<p>content</p>
+</div>
+
+Styleguide 0.4.13
+*/
+div
+{
+
+}

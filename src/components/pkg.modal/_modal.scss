@@ -1,0 +1,65 @@
+/*
+Modal
+
+A window that appears over the top of the rest of the content
+
+Markup:
+
+<p><a class="modal-trigger" href="#overlay1">Launch Modal</a></p>
+<div class="modal-bg"></div>
+
+<div id="overlay1" class="modal">
+    <div class="modal__content">
+        <h2>Test</h2>
+        <p>Content</p>
+        <span class="modal__close">x</span>
+    </div>
+</div>
+
+Styleguide 2.4
+*/
+
+$modal-bg-color: rgba(0, 0, 0, 0.6);
+$modal-inner-color: #fff;
+$modal-width: 60%;
+$modal-padding: 1em;
+
+.modal {
+    display: none;
+
+    &.active {
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: $modal-bg-color;
+    }
+
+    .modal__content {
+        background: $modal-inner-color;
+        width: 90%;
+        padding: $modal-padding;
+        position: fixed;
+        top: 10%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        max-height: 80%;
+        overflow-y: auto;
+    }
+
+    @media only screen and (min-width: $device-min-width-med) {
+        .modal__content {
+            width: $modal-width;
+        }
+    }
+
+    .modal__close {
+        position: absolute;
+        right: 1em;
+        top: 1em;
+        cursor: pointer;
+    }
+}

@@ -1,13 +1,14 @@
-require('jquery');
-
-import {Collapse} from '../../lib/components/pkg.collapse/collapse';
-import {MobileNav} from '../../lib/components/pkg.mobilenav/mobilenav';
-import {Ajax} from '../../lib/components/js.ajax/ajax';
-import {Tooltips} from '../../lib/components/pkg.tooltip/tooltip';
-import {Carousel} from '../../lib/components/pkg.carousel/carousel';
-import {Modal} from '../../lib/components/pkg.modal/modal';
+import {Collapse} from '../components/pkg.collapse/collapse';
+import {MobileNav} from '../components/pkg.mobilenav/mobilenav';
+import {Ajax} from '../components/js.ajax/ajax';
+import {Tooltips} from '../components/pkg.tooltip/tooltip';
+import {Carousel} from '../components/pkg.carousel/carousel';
+import {Modal} from '../components/pkg.modal/modal';
 
 import './thirdparty/slick.js';
+
+console.dir(Modernizr)
+console.dir(jQuery)
 
 let worker = new Worker('/assets/js/webworkers/worker.js');
 worker.onmessage = function(e) {

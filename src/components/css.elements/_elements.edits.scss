@@ -1,0 +1,36 @@
+
+/*
+Edits
+
+Styleguide 0.1
+*/
+
+/*
+del
+
+The del element represents a removal from the document. Thedel elements should not cross implied paragraph boundaries
+
+Markup:
+<p><del>This text is deleted</del></p>
+
+Styleguide 0.1.1
+*/
+del
+{
+	color:$clr-error;
+}
+
+/*
+ins
+
+The ins element represents an addition to the document. The ins elements should not cross implied paragraph boundaries.
+
+Markup:
+<p>My favourite colour is <del datetime="2010-10-11T01:25-07:00">blue</del> <ins datetime="2010-10-11T01:25-07:01">red</ins>, but I also like green and yellow.</p>
+
+Styleguide 0.1.2
+*/
+ins
+{
+	color:$clr-success;
+}

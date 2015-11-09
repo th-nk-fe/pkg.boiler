@@ -2,7 +2,7 @@
   "name": "TH_NK",
   "version": "0.1.0",
   "browser": {
-    "modernizr": "./lib/components/modernizr/modernizr.js",
+    "modernizr": "./src/js/thirdparty/modernizr.js",
     "jquery": "./lib/components/jquery/dist/jquery.min.js"
   },
   "browserify-shim": {

@@ -1,0 +1,27 @@
+/// ...
+/// @group framework
+/// @author Michael Ord
+@mixin rhythm($scale, $before: 0, $after: 0)
+{
+    @if ($scale == 0 and $before == 0 and $after == 0)
+    {
+        font-size           :$body-font-size;
+        line-height         :$body-font-size * $base-line-height;
+    }
+    @else
+    {
+        @if ($scale == 0)
+        {
+            font-size       :$body-font-size;
+            line-height     :$body-font-size * $base-line-height;
+        }
+        @else
+        {
+            $new-font-size  :round($body-font-size * exponent($scale-factor, $scale));
+            font-size       :$new-font-size;
+            line-height     :ceil($new-font-size / ($base-line-height * $body-font-size)) * $base-line-height * $body-font-size;
+        }
+        margin-top          :$body-font-size * $base-line-height * $before;
+        margin-bottom       :$body-font-size * $base-line-height * $after;
+    }
+}

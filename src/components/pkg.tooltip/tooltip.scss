@@ -1,0 +1,112 @@
+
+/*
+Tooltip
+
+Tooltips are small, interactive, textual hints for mainly graphical elements. When using icons for actions you can use a tooltip to give people clarification on its function.
+
+.tooltip--top    - Tooltip goes above the Element
+.tooltip--bottom    - Tooltip goes below the Element
+.tooltip--left    - Tooltip goes to the left of the Element
+.tooltip--right    - Tooltip goes to the right of the Element
+
+Markup:
+<a class="btn tooltip {$modifiers}"><span class="tooltip__text">tooltip text</span>tooltip trigger</a>
+
+Styleguide 2.6
+*/
+
+$tooltip-bg-color:						#fff;
+$tooltip-border:						1px solid #cccccc;
+$tooltip-padding:						10px;
+$tooltip-font-color:					#000;
+$tooltip-min-width:						200px;
+$tooltip-fade-time:						200ms;
+
+.tooltip{
+	position:relative;
+}
+
+span.tooltip__text{
+	position:absolute;
+	display:none;
+	background:$tooltip-bg-color;
+	color:$tooltip-font-color;
+	padding:$tooltip-padding;
+	box-sizing:border-box;
+	font-size:12px;
+	line-height:1.5;
+	min-width:$tooltip-min-width;
+	border:$tooltip-border;
+}
+
+.tooltip:hover > .tooltip__text{
+	text-decoration:none;
+	color:$tooltip-font-color;
+}
+
+.tooltip-overlay > .tooltip__text{
+	opacity:0;
+	transition:opacity 200ms;
+	white-space: nowrap;
+	-webkit-animation-duration:$tooltip-fade-time;
+  	animation-duration: $tooltip-fade-time;
+}
+
+span.tooltip__text.show{
+	opacity:1;
+}
+
+.tooltip:hover > span.tooltip__text{
+	display:inline-block;
+}
+
+.tooltip--top > span.tooltip__text{
+	transform:translateY(-100%);
+	top:0;
+	left:0;
+}
+
+.tooltip--bottom > span.tooltip__text{
+	transform:translateY(100%);
+	bottom:0;
+	left:0;
+}
+
+.tooltip--left > span.tooltip__text{
+	transform:translateX(-100%);
+	top:0;
+	left:0;
+}
+
+.tooltip--right > span.tooltip__text{
+	transform:translateX(100%);
+	top:0;
+	right:0;
+}
+
+/*
+Tooltip overlay layer
+
+This layer sits on top of over content and allows tooltips to expand out of overflow hidden elements, needs js tooltips to be enabled by adding data-tooltip-type to tooltip element.
+
+.tooltip--top    - Tooltip goes above the Element
+.tooltip--bottom    - Tooltip goes below the Element
+.tooltip--left    - Tooltip goes to the left of the Element
+.tooltip--right    - Tooltip goes to the right of the Element
+
+Markup:
+<a class="btn tooltip {$modifiers}" data-tooltip-type="enhanced"><span class="tooltip__text">tooltip text</span>top tooltip</a>
+
+Styleguide 2.6.1
+*/
+
+.tooltip-overlay{
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:100;
+}
+
+.tooltip-overlay.show{
+	display:block;
+}

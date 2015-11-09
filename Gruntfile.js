@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 		    }
 		},
 		clean: {
-			build: ['./docs',/*'./lib',*/'./public/assets/components'],
+			build: ['./docs',/*'./lib','./public/assets/components'*/],
 		},
 		karma: {
             unit: {
@@ -50,6 +50,18 @@ module.exports = function(grunt) {
 		        cwd: 'src/js/webworkers',
 		        src:['**/*'],
 				dest: 'public/assets/js/webworkers',
+		        expand: true
+		    },
+			components: {
+		        cwd: 'lib/components',
+		        src:['**/*'],
+				dest: 'src/components',
+		        expand: true
+		    },
+			modules: {
+		        cwd: 'src/_compiled/modules',
+		        src:['**/*'],
+				dest: 'public/assets/js/modules',
 		        expand: true
 		    },
 			dependancies: {
@@ -249,16 +261,16 @@ module.exports = function(grunt) {
 		        files: {
 					'public/assets/css/site.css': 'src/scss/site.scss'
 		        }
-			}/*,
+			},
 			styleguide:{
 				files: [{
 					expand: true,
-					cwd: 'src/scss',
+					cwd: 'src',
 					src: ['*.scss'],
 					dest: 'public/assets/css',
 					ext: '.css'
 				}]
-			}*/
+			}
 		},
 		//https://github.com/postcss/postcss
 		postcss: {
@@ -491,7 +503,7 @@ module.exports = function(grunt) {
 		},
 		watch:{
 			css:{
-				files: ['src/scss/**/*.scss','lib/components/**/*.scss'],
+				files: ['src/scss/**/*.scss','src/components/**/*.scss'],
 			    tasks: ['sass'],
 			    options: {
 			      spawn: false,
@@ -550,10 +562,10 @@ module.exports = function(grunt) {
 			},
 			jsdoc : {
 				path: 'http://localhost:3001/jsdoc'
-			},
+			}/*,
 			perf : {
 				path: 'http://localhost:3001/performance'
-			},
+			}*/,
 			sassdoc : {
 				path: 'http://localhost:3001/sassdoc'
 			}
