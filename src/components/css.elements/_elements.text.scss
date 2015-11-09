@@ -46,73 +46,6 @@ strong
 }
 
 /*
-i
-
-Represents a span of text in an alternate voice or mood, or otherwise offset from the normal prose, such as a taxonomic designation, a technical term, an idiomatic phrase from another language, a thought, a ship name, or some other prose whose typical typographic presentation is italicized.
-Only use i when nothing more suitable is available — e.g., em for text with stress emphasis, strong for text with semantic importance, cite for titles in a citation or bibliography, dfn for defining a word, and var for mathematical variables.
-
-Markup:
-<p>The term <i>prose content</i> is defined above.
-<i class="taxonomy">Nanotyrannus</i> ("dwarf tyrant") is a genus of tyrannosaurid dinosaur, and is possibly a juvenile specimen of <i class="taxonomy">Tyrannosaurus</i>.</p>
-
-Styleguide 0.9.3
-*/
-i
-{
-
-}
-
-/*
-b
-
-Represents a span of text to be stylistically offset from the normal prose without conveying any extra importance. Examples are key words in a document abstract, product names in a review, or other spans of text whose typical typographic presentation is bold.
-The b element should be used as a last resort when no other element is more appropriate. In particular, headings should use the h1 to h6 elements, stress emphasis should use the em element, importance should be denoted with the strong element, and text marked or highlighted should use the mark element.
-
-Markup:
-<p><b class="character">Deckard</b>: <i class="voiceover">The report would be routine retirement of a replicant which didn't make me feel any better about shooting a woman in the back. There it was again. Feeling, in myself. For her, for Rachael.</i></p>
-
-Styleguide 0.9.4
-*/
-b
-{
-
-}
-
-/*
-u
-
-The <code>u</code> element represents a span of text with an unarticulated, though explicitly rendered, non-textual annotation (when you are annotating something, but not explicitly saying what it is). Examples include indicating misspelt words, labeling proper names in traditional Chinese prose, or indicating a family name when the name’s order is non-western
-
-Markup:
-<span itemscope itemtype="http://schema.org/Person" lang="ja-latn">
-	<u itemprop="familyName">Son</u> <span itemprop="givenName">Goku</span>
-</span>
-
-Styleguide 0.9.5
-*/
-u
-{
-
-}
-
-/*
-s
-
-The <code>s</code> element represents contents that are no longer accurate or no longer relevant.
-
-Markup:
-<p>Sale on now!</p>
-<p><s>Get up to 25% off</s></p>
-<p><strong>Now down to 50% off</strong></p>
-
-Styleguide 0.9.6
-*/
-s
-{
-
-}
-
-/*
 small
 
 Represents side comments such as small print. It is not intended to be presentational. The small element should not be used for extended spans of text such as multiple paragraphs, lists, or sections of text. It is only intended for short runs of text.
@@ -126,7 +59,7 @@ Markup:
 	<small>&copy; copyright HTML5 Doctor. </small>
 </footer>
 
-Styleguide 0.9.7
+Styleguide 0.9.3
 */
 small
 {
@@ -141,7 +74,7 @@ Represents an abbreviation or acronym. The optional title attribute may be used 
 Markup:
 <p>The <abbr title="Web Hypertext Application Technology Working Group">WHATWG</abbr> started working on HTML5 in 2004.</p>
 
-Styleguide 0.9.8
+Styleguide 0.9.4
 */
 abbr
 {
@@ -159,58 +92,6 @@ abbr
 }
 
 /*
-q
-
-The <code>q</code> element represents some phrasing content quoted from another source.
-
-Markup:
-<p>And then he said <q>I heart HTML5</q></p>
-
-Styleguide 0.9.9
-*/
-q
-{
-
-}
-
-/*
-cite
-
-The <code>cite</code> element represents the title of a work (e.g. a book, a paper, an essay, a poem, a score, a song, a script, a film, a TV show, a game, a sculpture, a painting, a theatre production, a play, an opera, a musical, an exhibition, a legal case report, etc). This can be a work that is being quoted or referenced in detail (i.e. a citation), or it can just be a work that is mentioned in passing.
-A person's name is not the title of a work — even if people call that person a piece of work — and the element must therefore not be used to mark up people's names. (In some cases, the b element might be appropriate for names; e.g. in a gossip article where the names of famous people are keywords rendered with a different style to draw attention to them. In other cases, if an element is really needed, the span element can be used.)
-
-Markup:
-<p>My favourite book is <cite>Introducing HTML5</cite> by Bruce and Remy</p>
-
-Styleguide 0.9.10
-*/
-cite
-{
-
-}
-
-/*
-dfn
-
-The <code>dfn</code> element represents the defining instance of a term. The paragraph, description list group, or section that is the nearest ancestor of the dfn element must also contain the definition(s) for the term given by the dfn element.
-
-Markup:
-<p>While they're essential reading material for our job, the <dfn><abbr title="World Wide Web Consortium">W3C</abbr></dfn> specifications are not exactly George R. R. Martin-level reading material.</p>
-
-Styleguide 0.9.11
-*/
-dfn
-{
-	&[title]
-	{
-		&:hover
-		{
-			cursor 				:help;
-		}
-	}
-}
-
-/*
 sub
 
 The <code>sub</code> element can be used inside a var element, for variables that have subscripts.
@@ -218,7 +99,7 @@ The <code>sub</code> element can be used inside a var element, for variables tha
 Markup:
 <p>H<sub>2</sub>O is the chemical formula for water</p>
 
-Styleguide 0.9.12
+Styleguide 0.9.5
 */
 sub
 {
@@ -233,7 +114,7 @@ The <code>sup</code> element represents a superscript and the sub element repres
 Markup:
 <p>Today is the 2<sup>nd</sup> of May</p>
 
-Styleguide 0.9.13
+Styleguide 0.9.6
 */
 sup
 {
@@ -248,7 +129,7 @@ Represents a precise date and/or time in the proleptic Gregorian calendar. The t
 Markup:
 <time datetime="2007-08-29T13:58Z">August 29th, 2007 at 13:58</time>
 
-Styleguide 0.9.14
+Styleguide 0.9.7
 */
 time
 {
@@ -263,7 +144,7 @@ The <code>code</code> element represents a fragment of computer code. This could
 Markup:
 <p>To get started with HTML5 you just need at this top of your page <code>&lt;!DOCTYPE html&gt;</code></p>
 
-Styleguide 0.9.15
+Styleguide 0.9.8
 */
 
 $code-color						:#c7254e;
@@ -280,175 +161,6 @@ code
 }
 
 /*
-kbd
-
-The kbd element represents user input (typically keyboard input, although it may also be used to represent other input, such as voice commands).
-When the kbd element is nested inside a samp element, it represents the input as it was echoed by the system. When the kbd element contains a samp element, it represents input based on system output, for example invoking a menu item.
-When the kbd element is nested inside another kbd element, it represents an actual key or other single unit of input as appropriate for the input mechanism.
-
-Markup:
-<p>Mac users: To take a screenshot press <kbd><kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>3</kbd></kbd></p>
-
-Styleguide 0.9.16
-*/
-
-$kbd-color						:#fff;
-$kbd-bg							:#333;
-
-kbd
-{
-	padding				:2px 4px;
-	font-size			:90%;
-	color				:$kbd-color;
-	background-color	:$kbd-bg;
-	border-radius		:$border-radius-small;
-	box-shadow			:inset 0 -1px 0 rgba(0,0,0,.25);
-
-	kbd
-	{
-		padding			:0;
-		font-size		:100%;
-		font-weight		:bold;
-		box-shadow		:none;
-	}
-}
-
-/*
-samp
-
-The <code>samp</code> element represents (sample) output from a program or computing system
-
-Markup:
-<pre><samp>mike:mysite mike$ <kbd>git status</kbd>
-# On branch master
-nothing to commit (working directory clean)
-mike:mysite mike$</samp></pre>
-
-Styleguide 0.9.17
-*/
-samp
-{
-
-}
-
-/*
-var
-
-The var element represents a variable. This could be an actual variable in a mathematical expression or programming context, or it could just be a term used as a placeholder in prose.
-
-Markup:
-<p><var>E</var> energy is equal to <var>m</var> mass multiplied by the <var>c</var> speed of light, squared.</p>
-
-Styleguide 0.9.18
-*/
-var
-{
-
-}
-
-/*
-mark
-
-Represents a run of text in one document marked or highlighted because of its relevance in another context.
-When used in a quotation or other block of text referenced in a document, it indicates a highlight that was not present in the original document — e.g., a portion of text in an academic publication that has recently come under additional scrutiny.
-
-Markup:
-<p>In this sentence we'll be using the mark element. <mark>HTML5</mark> Can you see where it has been used?</p>
-
-Styleguide 0.9.19
-*/
-mark
-{
-	color 						:inherit;
-	padding 					:2px 4px;
-	display 					:inline;
-	background-color			:$mark-background-color;
-	border-radius				:$border-radius-small;
-}
-
-/*
-bdi
-
-Note: This is not supported in IE,Safari or Opera.
-
-The bdi element represents a span of text that is to be isolated from its surroundings for the purposes of bidirectional text formatting.
-
-
-Markup:
-<ul>
-	<li><bdi>johnsmith</bdi> joined the site</li>
-	<li><bdi>the_guru</bdi> posted "February update"</li>
-	<li><bdi>????</bdi> commented on "Getting started with HTML5"</li>
-</ul>
-
-Styleguide 0.9.20
-*/
-bdi
-{
-
-}
-
-/*
-bdo
-
-The bdo element represents explicit text directionality formatting control for its children. It allows authors to override the Unicode bidirectional algorithm by explicitly specifying a direction override.
-
-Markup:
-<p><bdo dir="rtl">Don't cheat by reading this in a mirror!</bdo></p>
-
-Styleguide 0.9.21
-*/
-bdo
-{
-
-}
-
-/*
-ruby
-
-Represents a container for base text and ruby text — small annotations used for phonetic readings in languages such as Japanese and Chinese. Examples include furigana and zhùyin fúhào (bopomofo).
-
-Markup:
-<ruby>??<rp>(</rp><rt>????</rt><rp>)</rp>???<rp>(</rp><rt>?????</rt><rp>)</rp></ruby>
-
-Styleguide 0.9.22
-*/
-ruby
-{
-
-}
-
-/*
-rt
-
-Represents a container for ruby text inside a &lt;ruby&gt; element. &lt;rt&gt; content becomes the small annotations rendered by default above horizontal base text or to the right of vertical base text.
-
-Markup:
-<ruby>??<rp>(</rp><rt>????</rt><rp>)</rp>???<rp>(</rp><rt>?????</rt><rp>)</rp></ruby>
-
-Styleguide 0.9.23
-*/
-rt
-{
-
-}
-
-/*
-rp
-
-Represents a container for parentheses used to wrap ruby text (&lt;rt&gt;) inside a &lt;ruby&gt; element. These are displayed by browsers which don't support &lt;ruby&gt;, allowing for graceful degradation of ruby content. Browsers which support &lt;ruby&gt; hide &lt;rp&gt; via display:none.
-
-Markup:
-<ruby>??<rp>(</rp><rt>????</rt><rp>)</rp>???<rp>(</rp><rt>?????</rt><rp>)</rp></ruby>
-
-Styleguide 0.9.24
-*/
-rp
-{
-
-}
-
-/*
 span
 
 The span element doesn't mean anything on its own, but can be useful when used together with the global attributes, e.g. class, lang, or dir. It represents its children.
@@ -456,7 +168,7 @@ The span element doesn't mean anything on its own, but can be useful when used t
 Markup:
 <span>This is an example of the span element</span>
 
-Styleguide 0.9.25
+Styleguide 0.9.9
 */
 span
 {
@@ -474,21 +186,6 @@ Markup:
 Styleguide 0.9.26
 */
 br
-{
-
-}
-
-/*
-wbr
-
-The wbr element represents a line break opportunity. Any content inside wbr elements must not be considered part of the surrounding text.
-
-Markup:
-html5<wbr>doctor.com
-
-Styleguide 0.9.27
-*/
-wbr
 {
 
 }

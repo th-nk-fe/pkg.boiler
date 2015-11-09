@@ -55,7 +55,7 @@
 			$output :$rem;
 		}
 
-		$counter 	:0;
+		$counter 	:0$counter + 1;
 	}
 
 	@return unquote($output);

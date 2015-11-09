@@ -1,7 +1,7 @@
 /*
 Utility
 
-Styleguide 0.11
+Styleguide 0.10
 */
 
 /*
@@ -16,7 +16,7 @@ Markup:
 	<li>list item</li>
 </ul>
 
-Styleguide 0.11.1
+Styleguide 0.10.1
 */
 .list
 {
@@ -44,7 +44,7 @@ Align
 Markup:
 <p class="align{$modifiers}">text align</p>
 
-Styleguide 0.11.2
+Styleguide 0.10.2
 */
 
 .align--left {
@@ -73,7 +73,7 @@ Markup:
 	<p class="align--vertical">text align</p>
 </div>
 
-Styleguide 0.11.3
+Styleguide 0.10.3
 */
 .valign {
 	display: -webkit-box;
@@ -96,7 +96,7 @@ Truncate
 Markup:
 <p class="truncate" style="width:50px;">text text text text text text text text text text text text text text</p>
 
-Styleguide 0.11.4
+Styleguide 0.10.4
 */
 .truncate {
 	display: block;
@@ -118,7 +118,7 @@ hide--med-large - hide for med and above
 Markup:
 <p class="{$modifiers}">hide text</p>
 
-Styleguide 0.11.5
+Styleguide 0.10.5
 */
 .hide {
 	display: none !important; 
@@ -166,7 +166,7 @@ show--med-large - show on medium and above
 Markup:
 <p class="{$modifiers}">show text</p>
 
-Styleguide 0.11.6
+Styleguide 0.10.6
 */
 
 @media only screen and (min-width : $device-min-width-large) {

@@ -1,7 +1,7 @@
 /*
 Buttons
 
-Styleguide 0.12
+Styleguide 0.11
 */
 $btn-size-small:                        0.85em;
 $btn-size-large:                        1.2em;
@@ -16,7 +16,7 @@ $btn-font-size:                         1em;
 $btn-line-height:                       1.8;
 
 $btn-font-color:                        #000000;
-$btn-bg-color:                          #8C4646;
+$btn-bg-color:                          #6dc111;
 $btn-border:                            1px solid #F2AE72;
 $btn-icon-color:                        $btn-font-color;
 
@@ -53,7 +53,7 @@ Markup:
 <a class="btn" role="button" tab-index="0">Click Anchor</a>
 <span class="btn" role="button" tab-index="0">Click Span</span>
 
-Styleguide 0.12.1
+Styleguide 0.11.1
 */
 
 .btn {
@@ -115,7 +115,7 @@ Markup:
 <a class="btn btn--small"role="button" tab-index="0">Click Anchor</a>
 <span class="btn btn--small" role="button" tab-index="0">Click Span</span>
 
-Styleguide 0.12.2
+Styleguide 0.11.2
 */
 
 .btn--small {
@@ -130,7 +130,7 @@ Markup:
 <a class="btn btn--large" role="button" tab-index="0">Click Anchor</a>
 <span class="btn btn--large"role="button" tab-index="0">Click Span</span>
 
-Styleguide 0.12.3
+Styleguide 0.11.3
 */
 
 .btn--large {
@@ -147,7 +147,7 @@ Markup:
 <a class="btn btn--icon" role="button" tab-index="0"><span class="icon icon-icon"></span>Click Anchor</a>
 <span class="btn btn--icon" role="button" tab-index="0"><span class="icon icon-icon" data-grunticon-embed></span>Click Span</span>
 
-Styleguide 0.12.4
+Styleguide 0.11.4
 */
 
 .btn--icon {
@@ -194,7 +194,7 @@ Markup:
 <span class="btn btn--icon btn--right btn--small" role="button" tab-index="0"><span class="icon icon-icon" data-grunticon-embed></span>Click Span</span>
 <span class="btn btn--icon btn--right btn--large" role="button" tab-index="0"><span class="icon icon-icon" data-grunticon-embed></span>Click Span</span>
 
-Styleguide 0.12.5
+Styleguide 0.11.5
 */
 
 .btn--right {
@@ -217,7 +217,7 @@ Markup:
 <span class="icon icon-icon"></span>
  
 
-Styleguide 0.12.6
+Styleguide 0.11.6
 */
 
 
