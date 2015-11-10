@@ -12,7 +12,7 @@ import {Modal} from '../components/pkg.modal/modal';
  */
 import './thirdparty/slick.js';
 
-console.log('2');
+console.log('1');
 
 let worker = new Worker('/assets/js/webworkers/worker.js');
 worker.onmessage = function(e) {
