@@ -579,14 +579,6 @@ module.exports = function(grunt) {
 			}
 		},
 	  githooks: {
-	  	options: { 
-        hashbang: '#!/bin/sh',
-        template: 'node_modules/grunt-githooks/templates/shell.hb',
-        startMarker: '## GRUNT-GITHOOKS START',
-        endMarker: '## GRUNT-GITHOOKS END',
-        command: 'PATH='+process.env.PATH+' grunt',
-        args: '--no-color'
-    },
 	    all: {
 	      'pre-commit': 'eslint --force'
 	    }
