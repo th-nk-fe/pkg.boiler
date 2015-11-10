@@ -43,7 +43,7 @@
     $base: $base-font-size
 )
 {
-	$output: $ems;
+	$output: '';
 	$counter: 0;
 
 	@each $item in $settings
@@ -56,10 +56,10 @@
 		}
 		@else
 		{
-			$output: $ems;
+			$output: $output + ' ' + $ems;
 		}
 
-		$counter: 0;
+		$counter: $counter + 1;
 	}
 
 	@return unquote($output);

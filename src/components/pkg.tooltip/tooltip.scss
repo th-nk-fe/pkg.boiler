@@ -12,7 +12,7 @@ Tooltips are small, interactive, textual hints for mainly graphical elements. Wh
 Markup:
 <a class="btn tooltip {$modifiers}"><span class="tooltip__text">tooltip text</span>tooltip trigger</a>
 
-Styleguide Section
+Styleguide 2.6
 */
 
 $tooltip-bg-color:						#fff;
@@ -97,7 +97,7 @@ This layer sits on top of over content and allows tooltips to expand out of over
 Markup:
 <a class="btn tooltip {$modifiers}" data-tooltip-type="enhanced"><span class="tooltip__text">tooltip text</span>top tooltip</a>
 
-Styleguide Subsection
+Styleguide 2.6.1
 */
 
 .tooltip-overlay{

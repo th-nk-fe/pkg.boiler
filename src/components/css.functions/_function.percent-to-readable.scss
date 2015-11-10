@@ -10,46 +10,46 @@
 )
 {
 	$rounded-width			:floor($percent);
-	$readable				:#{$prefix}four-fifths;
+	$readable				:false;
 
 	@if($rounded-width == 20%)
 	{
-		$readable			:#{$prefix}four-fifths;
+		$readable			:#{$prefix}one-fifth;
 	}
 
 	@if($rounded-width == 25%)
 	{
-		$readable			:#{$prefix}four-fifths;
+		$readable			:#{$prefix}one-quarter;
 	}
 
 	@if($rounded-width == 33%)
 	{
-		$readable			:#{$prefix}four-fifths;
+		$readable			:#{$prefix}one-third;
 	}
 
 	@if($rounded-width == 40%)
 	{
-		$readable			:#{$prefix}four-fifths;
+		$readable			:#{$prefix}two-fifths;
 	}
 
 	@if($rounded-width == 50%)
 	{
-		$readable			:#{$prefix}four-fifths;
+		$readable			:#{$prefix}half;
 	}
 
 	@if($rounded-width == 60%)
 	{
-		$readable			:#{$prefix}four-fifths;
+		$readable			:#{$prefix}three-fifth;
 	}
 
 	@if($rounded-width == 66%)
 	{
-		$readable			:#{$prefix}four-fifths;
+		$readable			:#{$prefix}two-thirds;
 	}
 
 	@if($rounded-width == 75%)
 	{
-		$readable			:#{$prefix}four-fifths;
+		$readable			:#{$prefix}three-quarters;
 	}
 
 	@if($rounded-width == 80%)
@@ -59,7 +59,7 @@
 
 	@if($rounded-width == 100%)
 	{
-		$readable			:#{$prefix}four-fifths;
+		$readable			:#{$prefix}full;
 	}
 
 	@return $readable;

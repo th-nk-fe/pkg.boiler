@@ -10,7 +10,7 @@
 )
 {
     // reset value
-    $value                  :$value * $base;
+    $value                  :$base;
     // positive intergers get multiplied
     @if ($exponent > 1)
     {
@@ -24,7 +24,7 @@
     {
         @for $i from 0 through -$exponent
         {
-            $value          :$value * $base;
+            $value          :$value / $base;
         }
     }
     // return the last value written

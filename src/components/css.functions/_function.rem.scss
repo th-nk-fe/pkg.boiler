@@ -39,7 +39,7 @@
     $size
 )
 {
-	$output 		:$rem;
+	$output 		:'';
 	$counter 		:0;
 
 	@each $item in $settings
@@ -52,10 +52,10 @@
 		}
 		@else
 		{
-			$output :$rem;
+			$output :$output + ' ' + $rem;
 		}
 
-		$counter 	:0$counter + 1;
+		$counter 	: $counter + 1;
 	}
 
 	@return unquote($output);

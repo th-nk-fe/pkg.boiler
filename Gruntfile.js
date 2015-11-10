@@ -379,7 +379,7 @@ module.exports = function(grunt) {
 		*/
 		jsdoc:{
 			dist : {
-		        src: ['public/assets/js/app.js'], 
+		        src: ['public/assets/js/head.js','public/assets/js/app.js'], 
 		        options: {
 		            destination: 'docs/jsdoc'
 		        }
