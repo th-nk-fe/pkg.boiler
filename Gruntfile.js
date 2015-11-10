@@ -584,7 +584,7 @@ module.exports = function(grunt) {
         template: 'node_modules/grunt-githooks/templates/shell.hb',
         startMarker: '## GRUNT-GITHOOKS START',
         endMarker: '## GRUNT-GITHOOKS END',
-        command: 'PATH='+process.env.PATH+' grunt',
+        command: 'PATH=$PATH:/usr/local/bin:/usr/local/sbin:'+process.env.PATH+' grunt',
         args: '--no-color'
     },
 	    all: {
