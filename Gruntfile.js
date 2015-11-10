@@ -583,14 +583,9 @@ module.exports = function(grunt) {
 	        hashbang: '#!/bin/sh'
 	    },
 	    all: {
-	      'pre-commit': 'eslint --force'
+	      'pre-commit': 'eslint'
 	    }
-	  },
-		jitGrunt: {
-	        staticMappings: {
-	            default: 'eslint'
-	        }
-	    }
+	  }
 	};
 
 	grunt.initConfig(conf);
