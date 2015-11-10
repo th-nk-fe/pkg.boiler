@@ -1,5 +1,5 @@
 function echo(str){
-	console.log('web worker test .ts ' + str);
+	//console.log('web worker test .ts ' + str);
 }
 
 self.onmessage = function(e) {

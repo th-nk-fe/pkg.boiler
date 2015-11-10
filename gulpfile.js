@@ -62,7 +62,7 @@ var babelify = require('babelify');
 var browserify = require('browserify');
 var ss = require('vinyl-source-stream');
 
-var jssource = ["./src/js/**/*.js", "!./src/js/**/*.test.js"];
+var jssource = ["./src/js/**/*.js", "!./src/js/**/*.test.js", "!./src/js/head.js"];
 var jsheadsource = ["./src/js/head.js"];
 
 gulp.task("jsapp", function () {
@@ -83,7 +83,8 @@ gulp.task("jshead", function () {
 
 gulp.task("watchjs", function(){
     gulp.run(['jsapp','jshead']);
-    gulp.watch(jssource, ['jsapp','jshead']);
+    gulp.watch(jssource, ['jsapp']);
+    gulp.watch(jsheadsource, ['jshead']);
 });
 
 /*

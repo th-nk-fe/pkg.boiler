@@ -1,12 +1,12 @@
 /**
- * @module jQuery
- * @link https://jquery.com/
- * @global
+ * jQuery object
+ * @external jQuery
+ * @see {@link http://api.jquery.com/jQuery/}
  */
 require('jquery');
 /**
- * @module Modernizr
- * @link https://modernizr.com/
- * @global
+ * Modernizr object
+ * @external Modernizr
+ * @see {@link https://modernizr.com/}
  */
 require('modernizr');

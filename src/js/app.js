@@ -5,10 +5,12 @@ import {Tooltips} from '../components/pkg.tooltip/tooltip';
 import {Carousel} from '../components/pkg.carousel/carousel';
 import {Modal} from '../components/pkg.modal/modal';
 
+/**
+ * The jQuery plugin namespace.
+ * @external "$.slick"
+ * @see {@link http://kenwheeler.github.io/slick/|Slick jQuery Plugin}
+ */
 import './thirdparty/slick.js';
-
-console.dir(Modernizr)
-console.dir(jQuery)
 
 let worker = new Worker('/assets/js/webworkers/worker.js');
 worker.onmessage = function(e) {
