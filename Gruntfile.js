@@ -578,6 +578,11 @@ module.exports = function(grunt) {
 				tasks: watchers
 			}
 		},
+	  githooks: {
+	    all: {
+	      'pre-commit': 'eslint'
+	    }
+	  },
 		jitGrunt: {
 	        staticMappings: {
 	            default: 'eslint'
@@ -626,7 +631,8 @@ module.exports = function(grunt) {
 	load standalone task
 	*/
     //grunt.loadNpmTasks("grunt-asset-cachebuster");
-
+    grunt.loadNpmTasks('grunt-githooks');
+ 
     grunt.registerTask('builddev', config_tasks['builddev']);
     grunt.registerTask('buildserver', config_tasks['buildserver']);
     grunt.registerTask('conn', ['connect','open','concurrent:watch'])
