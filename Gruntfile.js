@@ -19,6 +19,11 @@ module.exports = function(grunt) {
 		/**
 		base
 		*/
+		githooks: {
+			all: {
+				'pre-commit': 'eslint'
+			}
+		},
 		connect :{
 			docs: {
 		        options: {
@@ -620,7 +625,8 @@ module.exports = function(grunt) {
 	/**
 	load standalone task
 	*/
-    grunt.loadNpmTasks("grunt-asset-cachebuster");
+    //grunt.loadNpmTasks("grunt-asset-cachebuster");
+    grunt.loadNpmTasks('grunt-githooks');
 
     grunt.registerTask('builddev', config_tasks['builddev']);
     grunt.registerTask('buildserver', config_tasks['buildserver']);

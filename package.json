@@ -10,7 +10,9 @@
     "jquery": "$"
   },
   "browserify": {
-    "transform": [ "browserify-shim" ]
+    "transform": [
+      "browserify-shim"
+    ]
   },
   "devDependencies": {
     "babelify": "^6.1.0",
@@ -35,6 +37,7 @@
     "grunt-contrib-watch": "~0.3.1",
     "grunt-eslint": "~16.0.0",
     "grunt-exec": "^0.4.6",
+    "grunt-githooks": "^0.3.1",
     "grunt-grunticon": "^2.2.1",
     "grunt-htmlhint-plus": "^0.1.0",
     "grunt-jscs": "~1.8.0",
